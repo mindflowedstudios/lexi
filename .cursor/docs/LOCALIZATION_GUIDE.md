@@ -1,4 +1,4 @@
-# ryOS Localization Guide
+# LexiOS Localization Guide
 
 ## Quick Start
 

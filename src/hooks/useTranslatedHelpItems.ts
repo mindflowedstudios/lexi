@@ -16,7 +16,7 @@ export function useTranslatedHelpItems(
     finder: ["browseNavigate", "fileManagement", "viewSort", "quickAccess", "storageInfo", "trash"],
     soundboard: ["recordSlot", "keyboardPlay", "waveformView", "customizeSlot", "multipleBoards", "importExport"],
     "internet-explorer": ["browseWeb", "travelThroughTime", "historyReimagined", "saveFavorites", "exploreTimeNodes", "shareJourney"],
-    chats: ["chatWithRyo", "createEditFiles", "controlApps", "joinChatRooms", "pushToTalk", "nudgeDjMode"],
+    chats: ["chatWithKassam", "createEditFiles", "controlApps", "joinChatRooms", "pushToTalk", "nudgeDjMode"],
     textedit: ["richEditing", "formatting", "listsTasks", "fileManagement", "voiceDictation", "slashCommands"],
     paint: ["drawingTools", "colors", "undo", "saving", "patterns", "filters"],
     "photo-booth": ["takingPhoto", "quickSnaps", "applyingEffects", "viewingPhotos", "downloadingPhotos", "switchingCameras"],
@@ -27,7 +27,7 @@ export function useTranslatedHelpItems(
     synth: ["virtualKeyboard", "controlsPanel", "presets", "waveform3d", "effects", "midiInput"],
     pc: ["pcEmulator", "keyboardControls", "mouseCapture", "fullscreenMode", "saveStates", "aspectRatio"],
     terminal: ["basicCommands", "navigation", "commandHistory", "aiAssistant", "fileEditing", "terminalSounds"],
-    "applet-viewer": ["appletStore", "createWithRyosChat", "viewApplets", "shareApplets", "openFromFinder", "keepUpdated"],
+    "applet-viewer": ["appletStore", "createWithLexiosChat", "viewApplets", "shareApplets", "openFromFinder", "keepUpdated"],
     "control-panels": ["appearance", "sounds", "aiModel", "shaderEffects", "backupRestore", "system"],
     admin: ["adminAccess", "userManagement", "roomManagement", "statistics"],
   };

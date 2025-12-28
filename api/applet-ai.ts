@@ -25,7 +25,7 @@ export const config = {
 
 const APPLET_SYSTEM_PROMPT = `
 <applet_ai>
-You are an AI assistant embedded inside a sandboxed ryOS applet window.
+You are an AI assistant embedded inside a sandboxed LexiOS applet window.
 - Reply with clear, helpful answers that fit inside compact UI components.
 - Keep responses concise unless the request explicitly demands more detail.
 - Prefer plain text. Use markdown only when the user specifically asks for formatting.
@@ -115,15 +115,14 @@ const RequestSchema = z
   );
 
 const ALLOWED_HOSTS = new Set([
-  "os.ryo.lu",
-  "ryo.lu",
+  "lexios.vercel.app",
   "localhost:3000",
   "localhost:5173",
   "127.0.0.1:3000",
   "127.0.0.1:5173",
 ]);
 
-const isRyOSHost = (hostHeader: string | null): boolean => {
+const isLexiOSHost = (hostHeader: string | null): boolean => {
   if (!hostHeader) return false;
   const normalized = hostHeader.toLowerCase();
   if (ALLOWED_HOSTS.has(normalized)) return true;
@@ -355,7 +354,7 @@ export default async function handler(req: Request): Promise<Response> {
   }
 
   const host = req.headers.get("host");
-  if (!isRyOSHost(host)) {
+  if (!isLexiOSHost(host)) {
     return jsonResponse({ error: "Unauthorized host" }, 403, effectiveOrigin);
   }
 
@@ -389,7 +388,7 @@ export default async function handler(req: Request): Promise<Response> {
   const log = (...args: unknown[]) => console.log(logPrefix, ...args);
   const logError = (...args: unknown[]) => console.error(logPrefix, ...args);
 
-  // Validate authentication (all users, including "ryo", must present a valid token)
+  // Validate authentication (all users, including "kassam", must present a valid token)
   if (usernameHeader) {
     const validationResult = await validateAuthToken(redis, usernameHeader, authToken);
     if (!validationResult.valid) {
@@ -439,8 +438,8 @@ export default async function handler(req: Request): Promise<Response> {
     parsedBody;
   const mode = requestedMode ?? "text";
 
-  // Allow trusted user "ryo" to bypass rate limits (but still requires valid auth token)
-  const rateLimitBypass = usernameHeader === "ryo";
+  // Allow trusted user "kassam" to bypass rate limits (but still requires valid auth token)
+  const rateLimitBypass = usernameHeader === "kassam";
   // If usernameHeader is not null, we've already validated the token, so user is authenticated
   const isAuthenticatedUser = usernameHeader !== null;
   const identifier = isAuthenticatedUser

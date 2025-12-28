@@ -1,4 +1,4 @@
-# ryOS — A Web-Based Agentic AI OS, made with Cursor
+# LexiOS — A Web-Based Agentic AI OS, made with Cursor
 
 A modern web-based desktop environment inspired by classic macOS and Windows, built with React, TypeScript, and AI. Features multiple built-in applications, a familiar desktop interface, and a system-aware AI assistant. Works on all devices—desktop, tablet, and mobile.
 
@@ -9,7 +9,7 @@ A modern web-based desktop environment inspired by classic macOS and Windows, bu
 - Authentic macOS and Windows-style desktop interactions
 - Multi-instance window manager with drag, resize, and minimize
 - Customizable wallpapers (photos, patterns, or videos)
-- System-wide sound effects and AI assistant (Ryo)
+- System-wide sound effects and AI assistant (Kassam)
 - Virtual file system with local storage persistence and backup/restore
 
 ### Themes
@@ -29,11 +29,11 @@ A modern web-based desktop environment inspired by classic macOS and Windows, bu
 - **Synth** — Virtual synthesizer with multiple waveforms, effects, and MIDI support
 - **Photo Booth** — Camera app with real-time filters and photo gallery
 - **Internet Explorer** — Time Machine that explores web history via Wayback Machine; AI generates sites for years before 1996 or in the future
-- **Chats** — AI chat with Ryo, public/private chat rooms, voice messages, and tool calling
+- **Chats** — AI chat with Kassam, public/private chat rooms, voice messages, and tool calling
 - **Control Panels** — System preferences: appearance, sounds, backup/restore, and file system management
 - **Minesweeper** — Classic puzzle game
 - **Virtual PC** — DOS emulator for classic games (Doom, SimCity, etc.)
-- **Terminal** — Unix-like CLI with AI integration (`ryo <prompt>`)
+- **Terminal** — Unix-like CLI with AI integration (`kassam <prompt>`)
 - **iPod** — 1st-gen iPod music player with YouTube import, lyrics, and translation
 - **Applet Store** — Browse, install, and share community-created HTML applets
 
@@ -42,7 +42,7 @@ A modern web-based desktop environment inspired by classic macOS and Windows, bu
 1. Launch apps from the Finder, Desktop, or Apple/Start menu
 2. Drag windows to move, drag edges to resize
 3. Use Control Panels to customize appearance and sounds
-4. Chat with Ryo AI for help or to control apps
+4. Chat with Kassam AI for help or to control apps
 5. Files auto-save to browser storage
 
 ## Project Structure

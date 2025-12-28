@@ -36,7 +36,7 @@
       },
       "help": {
         "adminAccess": {
-          "description": "Esta aplicación solo es accesible para el usuario administrador (ryo).",
+          "description": "Esta aplicación solo es accesible para el usuario administrador (lexi).",
           "title": "Acceso de administrador"
         },
         "roomManagement": {
@@ -233,9 +233,9 @@
           "description": "Explora e instala applets de la comunidad. Abre el menú Tienda para descubrir nuevas apps.",
           "title": "Tienda de Applets"
         },
-        "createWithRyosChat": {
-          "description": "Pide a ryOS Chat que cree apps y applets personalizados para ti. Comparte tus ideas y obtén apps funcionales al instante.",
-          "title": "Crea con ryOS Chat"
+        "createWithLexisChat": {
+          "description": "Pide a LexiOS Chat que cree apps y applets personalizados para ti. Comparte tus ideas y obtén apps funcionales al instante.",
+          "title": "Crea con LexiOS Chat"
         },
         "keepUpdated": {
           "description": "Busca actualizaciones en el menú Tienda para obtener las últimas versiones de tus applets instalados.",
@@ -250,7 +250,7 @@
           "title": "Compartir Applets"
         },
         "viewApplets": {
-          "description": "Abre y ejecuta applets guardados desde ryOS Chat o descargados de la tienda.",
+          "description": "Abre y ejecuta applets guardados desde LexiOS Chat o descargados de la tienda.",
           "title": "Ver Applets"
         }
       },
@@ -276,7 +276,7 @@
         "noAppletsOpen": "No hay applets abiertos",
         "open": "Abrir...",
         "openAppletStore": "Abrir Tienda de Applets",
-        "ryosApp": "App de ryOS",
+        "ryosApp": "App de LexiOS",
         "shareApplet": "Compartir Applet...",
         "store": "Tienda",
         "untitled": "Sin título",
@@ -312,7 +312,7 @@
         "deleteMessage": "Eliminar mensaje",
         "deleteRoom": "Eliminar sala",
         "leaveConversation": "Abandonar conversación",
-        "mentionRyo": "Mencionar a Ryo",
+        "mentionLexi": "Mencionar a Lexi",
         "messageUser": "Mensaje a {{username}}",
         "newChat": "Nuevo chat",
         "pushToTalk": "Pulsar para hablar",
@@ -352,24 +352,24 @@
         "setPasswordTitle": "Establecer Contraseña"
       },
       "help": {
-        "chatWithRyo": {
-          "description": "Escribe tu mensaje para chatear con Ryo, generar código u obtener ayuda con ryOS.",
-          "title": "Chatear con Ryo"
+        "chatWithLexi": {
+          "description": "Escribe tu mensaje para chatear con Lexi, generar código u obtener ayuda con LexiOS.",
+          "title": "Chatear con Lexi"
         },
         "controlApps": {
-          "description": "Pídele a Ryo que inicie o cierre apps, cambie temas o controle la reproducción del iPod.",
+          "description": "Pídele a Lexi que inicie o cierre apps, cambie temas o controle la reproducción del iPod.",
           "title": "Controlar Apps"
         },
         "createEditFiles": {
-          "description": "Pídele a Ryo que cree applets HTML, edite documentos, lea archivos o busque en la Tienda de Applets.",
+          "description": "Pídele a Lexi que cree applets HTML, edite documentos, lea archivos o busque en la Tienda de Applets.",
           "title": "Crear y editar archivos"
         },
         "joinChatRooms": {
-          "description": "Conéctate con otros en salas de chat públicas. Menciona a @ryo para respuestas de IA.",
+          "description": "Conéctate con otros en salas de chat públicas. Menciona a @lexi para respuestas de IA.",
           "title": "Unirse a Salas de Chat"
         },
         "nudgeDjMode": {
-          "description": "Envía 👋 nudge para obtener consejos contextuales. Ryo se convierte en DJ cuando suena música.",
+          "description": "Envía 👋 nudge para obtener consejos contextuales. Lexi se convierte en DJ cuando suena música.",
           "title": "Nudge y Modo DJ"
         },
         "pushToTalk": {
@@ -398,8 +398,8 @@
       },
       "messages": {
         "delete": "Eliminar",
-        "greeting": "👋 ¡hola! soy ryo. ¡pregúntame lo que quieras!",
-        "ryo": "Ryo",
+        "greeting": "👋 ¡hola! soy lexi. ¡pregúntame lo que quieras!",
+        "lexi": "Lexi",
         "you": "Tú"
       },
       "name": "Chats",
@@ -419,15 +419,15 @@
         "leave": "Salir",
         "listening": "Escuchando",
         "loginToChat": "Iniciar sesión en el chat",
-        "loginToContinue": "Inicia sesión para seguir chateando con Ryo.",
-        "loginToRyOS": "Iniciar sesión en ryOS",
+        "loginToContinue": "Inicia sesión para seguir chateando con Lexi.",
+        "loginToRyOS": "Iniciar sesión en LexiOS",
         "newChat": "Nuevo chat",
         "noTranscriptionText": "No se recibió texto de transcripción",
         "nudgeSent": "👋 *toque enviado*",
         "recording": "Grabando...",
         "retry": "Reintentar",
-        "ryo": "@ryo",
-        "ryoWillRespond": "Ryo responderá a este mensaje",
+        "lexi": "@lexi",
+        "ryoWillRespond": "Lexi responderá a este mensaje",
         "scrollToBottom": "Desplazarse al final",
         "sessionExpired": "La sesión ha caducado. Inicia sesión de nuevo.",
         "startNewConversation": "¿Iniciar una nueva conversación?",
@@ -628,7 +628,7 @@
       "elevenlabs": "ElevenLabs",
       "elevenlabsVoiceId": "ID de voz de ElevenLabs",
       "formatFileSystem": "Formatear sistema de archivos",
-      "formatFileSystemDescription": "Esto borrará todos los archivos (excepto los documentos de muestra), imágenes y fondos de pantalla personalizados. ryOS se reiniciará después del formato.",
+      "formatFileSystemDescription": "Esto borrará todos los archivos (excepto los documentos de muestra), imágenes y fondos de pantalla personalizados. LexiOS se reiniciará después del formato.",
       "help": {
         "aiModel": {
           "description": "Selecciona el modelo de IA utilizado por los Chats y el asistente de Terminal",
@@ -662,7 +662,7 @@
       "logIn": "Iniciar sesión",
       "logOut": "Cerrar sesión",
       "logOutOfAllDevices": "Cerrar sesión en todos los dispositivos",
-      "loggedInToRyOS": "Sesión iniciada en ryOS",
+      "loggedInToRyOS": "Sesión iniciada en LexiOS",
       "loggingOut": "Cerrando sesión...",
       "login": "Iniciar sesión",
       "loginToSendMessages": "Inicia sesión para enviar mensajes y más",
@@ -686,7 +686,7 @@
       "resetAllSettings": "Restablecer todos los ajustes",
       "resetAllSettingsDescription": "Esto borrará todos los ajustes guardados y restaurará los valores predeterminados.",
       "restore": "Restaurar",
-      "ryOSAccount": "Cuenta de ryOS",
+      "LexiOSAccount": "Cuenta de LexiOS",
       "screenSaver": "Protector de pantalla",
       "screenSaverDescription": "Se activa después de un período de inactividad",
       "screenSaverExitHint": "Haz clic o pulsa cualquier tecla para salir",
@@ -1340,7 +1340,7 @@
           "title": "Sincronizado con iPod"
         },
         "worksWithChats": {
-          "description": "Pide a Ryo que reproduzca canciones, controle la reproducción o ajuste configuraciones por chat.",
+          "description": "Pide a Lexi que reproduzca canciones, controle la reproducción o ajuste configuraciones por chat.",
           "title": "Funciona con Chats"
         }
       },
@@ -1748,10 +1748,10 @@
     "terminal": {
       "commands": {
         "about": "Acerca del terminal",
-        "ai": "Entrar en modo de chat de IA con ryo",
+        "ai": "Entrar en modo de chat de IA con lexi",
         "cat": "Ver contenido del archivo",
         "cd": "Cambiar directorio",
-        "chat": "Chatear con ryo (alias)",
+        "chat": "Chatear con lexi (alias)",
         "clear": "Limpiar pantalla del terminal",
         "cowsay": "Una vaca que habla",
         "date": "Mostrar fecha/hora actual",
@@ -1765,7 +1765,7 @@
         "open": "Abrir aplicación, archivo o applet",
         "pwd": "Mostrar directorio actual",
         "rm": "Mover archivo a la papelera",
-        "ryo": "Chatear con ryo",
+        "lexi": "Chatear con lexi",
         "su": "Cambiar o crear usuario",
         "touch": "Crear archivo vacío",
         "vim": "Abrir archivo en editor vim",
@@ -1774,7 +1774,7 @@
       "description": "Interfaz de línea de comandos",
       "help": {
         "aiAssistant": {
-          "description": "Escribe \"ryo <prompt>\" para chatear con Ryo AI directamente dentro de la terminal.",
+          "description": "Escribe \"lexi <prompt>\" para chatear con Lexi AI directamente dentro de la terminal.",
           "title": "Asistente de IA"
         },
         "basicCommands": {
@@ -1810,9 +1810,9 @@
       "name": "Terminal",
       "output": {
         "addedAndStartedPlaying": "Canción nueva añadida y en reproducción",
-        "askRyoAnything": "pregunta a ryo lo que quieras. escribe 'exit' para volver a la terminal.",
-        "askRyoWithPrompt": "pregunta a ryo lo que quieras. escribe 'exit' para volver a la terminal.\n→ desde tu comando: {{prompt}}",
-        "chatCleared": "conversación borrada. sigues chateando con ryo. escribe 'exit' para volver a la terminal.",
+        "askLexiAnything": "pregunta a lexi lo que quieras. escribe 'exit' para volver a la terminal.",
+        "askLexiWithPrompt": "pregunta a lexi lo que quieras. escribe 'exit' para volver a la terminal.\n→ desde tu comando: {{prompt}}",
+        "chatCleared": "conversación borrada. sigues chateando con lexi. escribe 'exit' para volver a la terminal.",
         "commandNotFound": "comando no encontrado: {{cmd}}. escribe 'help' para ver la lista de comandos disponibles.",
         "contentWritten": "Contenido escrito",
         "fileCreated": "Archivo creado",
@@ -1889,7 +1889,7 @@
           "title": "Edición enriquecida"
         },
         "slashCommands": {
-          "description": "Escribe / para acciones rápidas o deja que Ryo AI edite líneas de forma remota",
+          "description": "Escribe / para acciones rápidas o deja que Lexi AI edite líneas de forma remota",
           "title": "Comandos de barra"
         },
         "voiceDictation": {
@@ -2058,7 +2058,7 @@
     "aboutThisMac": {
       "builtInMemory": "Memoria Integrada",
       "clickToToggle": "Clic para alternar",
-      "description": "Información sobre ryOS en este equipo",
+      "description": "Información sobre LexiOS en este equipo",
       "largestUnusedBlock": "Bloque Sin Usar Más Grande",
       "mb": "MB",
       "system": "Sistema",
@@ -2072,7 +2072,7 @@
     "auth": {
       "createAccount": "Crear cuenta",
       "creatingAccount": "Creando...",
-      "dialogTitle": "Inicio de sesión de ryOS",
+      "dialogTitle": "Inicio de sesión de LexiOS",
       "logIn": "Iniciar sesión",
       "logOut": "Cerrar sesión",
       "logOutDescription": "¿Estás seguro de que quieres cerrar sesión? Se cerrará tu sesión.",
@@ -2166,8 +2166,8 @@
     },
     "htmlPreview": {
       "bannerFallbackTitle": "Applet sin título",
-      "codePreviewTitle": "Vista previa de código de ryOS",
-      "codePreviewTitleFullscreen": "Vista previa de código de ryOS en pantalla completa",
+      "codePreviewTitle": "Vista previa de código de LexiOS",
+      "codePreviewTitleFullscreen": "Vista previa de código de LexiOS en pantalla completa",
       "copyHtml": "Copiar código HTML",
       "downloadHtml": "Descargar HTML",
       "exitFullscreen": "Salir de pantalla completa",
@@ -2233,16 +2233,16 @@
     "system": {
       "debugBootScreenTest": "Prueba de pantalla de arranque de depuración...",
       "formatFileSystem": "Formatear sistema de archivos",
-      "formatFileSystemDesc": "¿Está seguro de que desea formatear el sistema de archivos? Esto eliminará permanentemente todos los documentos (excepto los documentos de muestra), imágenes y fondos de pantalla personalizados. ryOS se reiniciará después del formato.",
+      "formatFileSystemDesc": "¿Está seguro de que desea formatear el sistema de archivos? Esto eliminará permanentemente todos los documentos (excepto los documentos de muestra), imágenes y fondos de pantalla personalizados. LexiOS se reiniciará después del formato.",
       "formattingFileSystem": "Formateando sistema de archivos...",
       "rebooting": "Reiniciando...",
       "resetAllSettings": "Restablecer todos los ajustes",
-      "resetAllSettingsDesc": "¿Está seguro de que desea restablecer todos los ajustes? Esto borrará todos los ajustes guardados y restaurará los estados predeterminados. ryOS se reiniciará después del restablecimiento.",
+      "resetAllSettingsDesc": "¿Está seguro de que desea restablecer todos los ajustes? Esto borrará todos los ajustes guardados y restaurará los estados predeterminados. LexiOS se reiniciará después del restablecimiento.",
       "resettingSystem": "Restableciendo sistema...",
       "restoringSystem": "Restaurando sistema...",
       "systemRestoring": "Restaurando sistema...",
-      "updatingToRyOS": "Actualizando a ryOS {{version}}...",
-      "updatingToRyOSWithBuild": "Actualizando a ryOS {{version}} ({{buildNumber}})..."
+      "updatingToRyOS": "Actualizando a LexiOS {{version}}...",
+      "updatingToRyOSWithBuild": "Actualizando a LexiOS {{version}} ({{buildNumber}})..."
     },
     "toast": {
       "alreadyLatestVersion": "Ya estás ejecutando la última versión",
@@ -2253,7 +2253,7 @@
       "noAssetsToCache": "No hay recursos para almacenar en caché",
       "reboot": "Reiniciar",
       "total": "total",
-      "updateReady": "Actualización lista para ryOS {{version}} ({{buildNumber}})",
+      "updateReady": "Actualización lista para LexiOS {{version}} ({{buildNumber}})",
       "updatingAssets": "Actualizando recursos",
       "updatingIcons": "Actualizando iconos",
       "updatingSounds": "Actualizando sonidos",
@@ -2276,7 +2276,7 @@
   "settings": {
     "language": {
       "chineseTraditional": "中文",
-      "description": "Selecciona tu idioma preferido para la interfaz de ryOS",
+      "description": "Selecciona tu idioma preferido para la interfaz de LexiOS",
       "english": "English",
       "french": "Français",
       "german": "Deutsch",

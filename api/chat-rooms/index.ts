@@ -42,7 +42,7 @@ import {
   handleGetMessages,
   handleGetBulkMessages,
   handleSendMessage,
-  handleGenerateRyoReply,
+  handleGenerateKassamReply,
   handleDeleteMessage,
   handleClearAllMessages,
 } from "./_messages.js";
@@ -219,7 +219,7 @@ export async function GET(request: Request): Promise<Response> {
       case "cleanupPresence": {
         const { username, token } = extractAuth(request);
         const isValid = await validateAuth(username, token, requestId);
-        if (!isValid.valid || username?.toLowerCase() !== "ryo") {
+        if (!isValid.valid || username?.toLowerCase() !== "kassam") {
           response = createErrorResponse(
             "Unauthorized - Admin access required",
             403
@@ -237,7 +237,7 @@ export async function GET(request: Request): Promise<Response> {
       case "debugPresence": {
         const { username, token } = extractAuth(request);
         const isValid = await validateAuth(username, token, requestId);
-        if (!isValid.valid || username?.toLowerCase() !== "ryo") {
+        if (!isValid.valid || username?.toLowerCase() !== "kassam") {
           response = createErrorResponse(
             "Unauthorized - Admin access required",
             403
@@ -346,7 +346,7 @@ export async function POST(request: Request): Promise<Response> {
       "authenticateWithPassword",
       "setPassword",
       "createUser",
-      "generateRyoReply",
+      "generateKassamReply",
     ]);
 
     if (sensitiveRateLimitActions.has(action || "")) {
@@ -413,7 +413,7 @@ export async function POST(request: Request): Promise<Response> {
       "listTokens",
       "logoutAllDevices",
       "logoutCurrent",
-      "generateRyoReply",
+      "generateKassamReply",
     ];
 
     // Check authentication for protected actions
@@ -484,8 +484,8 @@ export async function POST(request: Request): Promise<Response> {
         );
         break;
 
-      case "generateRyoReply":
-        response = await handleGenerateRyoReply(
+      case "generateKassamReply":
+        response = await handleGenerateKassamReply(
           body as {
             roomId: string;
             prompt: string;
@@ -667,7 +667,7 @@ async function handleResetUserCounts(
   if (!username || !token) {
     return createErrorResponse("Forbidden - Admin access required", 403);
   }
-  if (username.toLowerCase() !== "ryo") {
+  if (username.toLowerCase() !== "kassam") {
     logInfo(requestId, `Unauthorized: User ${username} is not the admin`);
     return createErrorResponse("Forbidden - Admin access required", 403);
   }

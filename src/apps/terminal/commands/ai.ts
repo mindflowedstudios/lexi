@@ -54,7 +54,7 @@ export const chatCommand: Command = {
   name: "chat",
 };
 
-export const ryoCommand: Command = {
+export const kassamCommand: Command = {
   ...aiCommand,
-  name: "ryo",
+  name: "kassam",
 };

@@ -1,7 +1,7 @@
 /**
  * IndexedDB Operations Utility Module
  * 
- * Centralized helpers for IndexedDB operations used throughout ryOS.
+ * Centralized helpers for IndexedDB operations used throughout LexiOS.
  * Extracts common patterns from useFilesStore and other stores.
  */
 

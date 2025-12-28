@@ -47,8 +47,8 @@ let isUpdateInProgress = false;
 function getStoredVersion(): { version: string | null; buildNumber: string | null } {
   const state = useAppStore.getState();
   return {
-    version: state.ryOSVersion,
-    buildNumber: state.ryOSBuildNumber,
+    version: state.lexiOSVersion,
+    buildNumber: state.lexiOSBuildNumber,
   };
 }
 
@@ -56,7 +56,7 @@ function getStoredVersion(): { version: string | null; buildNumber: string | nul
  * Store version in the app store (call after successful prefetch)
  */
 function storeVersion(version: string, buildNumber: string, buildTime?: string): void {
-  useAppStore.getState().setRyOSVersion(version, buildNumber, buildTime);
+  useAppStore.getState().setLexiOSVersion(version, buildNumber, buildTime);
   console.log(`[Prefetch] Stored version: ${version} (${buildNumber})`);
 }
 
@@ -270,7 +270,7 @@ async function checkAndUpdate(isManual: boolean = false): Promise<void> {
     if (isManual) {
       const stored = getStoredVersion();
       toast.success('Already running the latest version', {
-        description: stored.version ? `ryOS ${stored.version} (${stored.buildNumber})` : undefined,
+        description: stored.version ? `LexiOS ${stored.version} (${stored.buildNumber})` : undefined,
       });
     }
     return;
@@ -324,7 +324,7 @@ export async function forceRefreshCache(): Promise<void> {
   // If already on latest version, just show success message without reboot
   if (!isNewVersion) {
     toast.success('Already running the latest version', {
-      description: stored.version ? `ryOS ${stored.version} (${stored.buildNumber})` : undefined,
+      description: stored.version ? `LexiOS ${stored.version} (${stored.buildNumber})` : undefined,
     });
     return;
   }

@@ -5,8 +5,7 @@
   "windows": ["main"],
   "remote": {
     "urls": [
-      "https://os.ryo.lu",
-      "https://ryo.lu",
+      "https://lexios.vercel.app",
       "http://localhost:*"
     ]
   },

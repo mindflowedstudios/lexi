@@ -72,9 +72,9 @@ export default defineConfig({
         "fonts/*.woff2",
       ],
       manifest: {
-        name: "ryOS",
-        short_name: "ryOS",
-        description: "An AI OS experience, made with Cursor",
+        name: "LexiOS",
+        short_name: "LexiOS",
+        description: "A love letter in the form of an OS, made for Lexi",
         theme_color: "#000000",
         background_color: "#000000",
         display: "standalone",

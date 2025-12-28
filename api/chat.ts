@@ -267,7 +267,7 @@ const generateDynamicSystemPrompt = (systemState?: SystemState) => {
     day: "numeric",
   });
 
-  const ryoTimeZone = "America/Los_Angeles";
+  const kassamTimeZone = "America/Denver";
 
   if (!systemState) return "";
 
@@ -276,7 +276,7 @@ const generateDynamicSystemPrompt = (systemState?: SystemState) => {
 Current User: ${systemState.username || "you"}
 
 ## TIME & LOCATION
-Ryo Time: ${timeString} on ${dateString} (${ryoTimeZone})`;
+Kassam Time: ${timeString} on ${dateString} (${kassamTimeZone})`;
 
   if (systemState.userLocalTime) {
     prompt += `
@@ -463,7 +463,7 @@ ${index + 1}. ${instance.title}${unsavedMark}${pathInfo} (instanceId: ${instance
     prompt += `\n\n<chat_room_reply_instructions>
 ## CHAT ROOM CONTEXT
 Room ID: ${systemState.chatRoomContext.roomId}
-Your Role: Respond as 'ryo' in this IRC-style chat room
+Your Role: Respond as 'kassam' in this IRC-style chat room
 Response Style: Use extremely concise responses
 
 Recent Conversation:
@@ -580,7 +580,7 @@ export default async function handler(req: Request) {
     // ---------------------------
     // Rate-limit & auth checks
     // ---------------------------
-    // Validate authentication (all users, including "ryo", must present a valid token)
+    // Validate authentication (all users, including "kassam", must present a valid token)
     // Enable grace period for expired tokens (client is responsible for token refresh)
     const validationResult = await validateAuthToken(redis, username, authToken, {
       allowExpired: true,
@@ -737,7 +737,7 @@ export default async function handler(req: Request) {
       tools: {
         launchApp: {
           description:
-            "Launch an application in the ryOS interface when the user explicitly requests it. If the id is 'internet-explorer', you must provide BOTH a real 'url' and a 'year' for time-travel; otherwise provide neither.",
+            "Launch an application in the LexiOS interface when the user explicitly requests it. If the id is 'internet-explorer', you must provide BOTH a real 'url' and a 'year' for time-travel; otherwise provide neither.",
           inputSchema: z
             .object({
               id: z.enum(appIds).describe("The app id to launch"),
@@ -810,7 +810,7 @@ export default async function handler(req: Request) {
         },
         closeApp: {
           description:
-            "Close an application in the ryOS interface—but only when the user explicitly asks you to close that specific app.",
+            "Close an application in the LexiOS interface—but only when the user explicitly asks you to close that specific app.",
           inputSchema: z.object({
             id: z.enum(appIds).describe("The app id to close"),
           }),
@@ -830,7 +830,7 @@ export default async function handler(req: Request) {
         // --- HTML generation & preview ---
         generateHtml: {
           description:
-            "Generate an HTML snippet for an ryOS Applet: a small windowed app (default ~320px wide) that runs inside ryOS, not the full page. Design mobile-first for ~320px width but keep layouts responsive to expand gracefully. Provide markup in 'html', a short 'title', and an 'icon' (emoji). DO NOT wrap it in markdown fences; the client will handle scaffolding.",
+            "Generate an HTML snippet for a LexiOS Applet: a small windowed app (default ~320px wide) that runs inside LexiOS, not the full page. Design mobile-first for ~320px width but keep layouts responsive to expand gracefully. Provide markup in 'html', a short 'title', and an 'icon' (emoji). DO NOT wrap it in markdown fences; the client will handle scaffolding.",
           inputSchema: z.object({
             html: z
               .string()
@@ -875,7 +875,7 @@ export default async function handler(req: Request) {
         // --- Unified Virtual File System Tools ---
         list: {
           description:
-            "List items from the ryOS virtual file system. Returns a JSON array with metadata for each item. CRITICAL: You MUST ONLY reference items that are explicitly returned in the tool result. DO NOT suggest, mention, or hallucinate items that are not in the returned list.",
+            "List items from the LexiOS virtual file system. Returns a JSON array with metadata for each item. CRITICAL: You MUST ONLY reference items that are explicitly returned in the tool result. DO NOT suggest, mention, or hallucinate items that are not in the returned list.",
           inputSchema: z.object({
             path: z
               .enum(["/Applets", "/Documents", "/Applications", "/Music", "/Applets Store"])
@@ -957,7 +957,7 @@ export default async function handler(req: Request) {
         },
         edit: {
           description:
-            "Edit existing files in the ryOS virtual file system. For creating new files, use the write tool (documents) or generateHtml tool (applets). For larger rewrites, use write with mode 'overwrite'.\n\n" +
+            "Edit existing files in the LexiOS virtual file system. For creating new files, use the write tool (documents) or generateHtml tool (applets). For larger rewrites, use write with mode 'overwrite'.\n\n" +
             "Before using this tool:\n" +
             "1. Use the read tool to understand the file's contents and context\n" +
             "2. Verify the file exists using list\n\n" +
@@ -1125,7 +1125,7 @@ export default async function handler(req: Request) {
         // --- System Settings Tool ---
         settings: {
           description:
-            "Change system settings in ryOS. Use this tool when the user asks to change language, theme, volume, enable/disable speech, or check for updates. Multiple settings can be changed in a single call.",
+            "Change system settings in LexiOS. Use this tool when the user asks to change language, theme, volume, enable/disable speech, or check for updates. Multiple settings can be changed in a single call.",
           inputSchema: z.object({
             language: z
               .enum(["en", "zh-TW", "ja", "ko", "fr", "de", "es", "pt", "it", "ru"])
@@ -1157,7 +1157,7 @@ export default async function handler(req: Request) {
               .boolean()
               .optional()
               .describe(
-                "When true, triggers a check for ryOS updates. Will notify the user if an update is available."
+                "When true, triggers a check for LexiOS updates. Will notify the user if an update is available."
               ),
           }),
         },

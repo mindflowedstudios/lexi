@@ -93,7 +93,7 @@ const getSystemState = () => {
   };
 };
 
-interface UseRyoChatProps {
+interface UseKassamChatProps {
   currentRoomId: string | null;
   onScrollToBottom: () => void;
   roomMessages?: Array<{
@@ -104,11 +104,11 @@ interface UseRyoChatProps {
   }>;
 }
 
-export function useRyoChat({
+export function useKassamChat({
   currentRoomId,
   onScrollToBottom,
   roomMessages = [],
-}: UseRyoChatProps) {
+}: UseKassamChatProps) {
   const { t } = useTranslation();
   // Pull current auth credentials from store (reactive)
   const { authToken, username } = useChatsStore();
@@ -120,11 +120,11 @@ export function useRyoChat({
     authHeaders["X-Username"] = username;
   }
 
-  // Create a separate AI chat hook for @ryo mentions in chat rooms
+  // Create a separate AI chat hook for @kassam mentions in chat rooms
   const {
-    messages: ryoMessages,
+    messages: kassamMessages,
     status,
-    stop: stopRyo,
+    stop: stopKassam,
   } = useChat({
     transport: new DefaultChatTransport({
       api: getApiUrl("/api/chat"),
@@ -136,9 +136,9 @@ export function useRyoChat({
     // We no longer stream client-side AI to avoid spoofing. onFinish unused.
   });
 
-  const isRyoLoading = status === "streaming" || status === "submitted";
+  const isKassamLoading = status === "streaming" || status === "submitted";
 
-  const handleRyoMention = useCallback(
+  const handleKassamMention = useCallback(
     async (messageContent: string) => {
       // Get recent chat room messages as context (last 20 messages)
       const recentMessages = roomMessages
@@ -156,14 +156,14 @@ export function useRyoChat({
         },
       };
 
-      // Call server to generate and insert a @ryo reply using authenticated request
+      // Call server to generate and insert a @kassam reply using authenticated request
       const headers: HeadersInit = { "Content-Type": "application/json" };
       if (authToken && username) {
         headers["Authorization"] = `Bearer ${authToken}`;
         headers["X-Username"] = username;
       }
 
-      await fetch(getApiUrl(`/api/chat-rooms?action=generateRyoReply`), {
+      await fetch(getApiUrl(`/api/chat-rooms?action=generateKassamReply`), {
         method: "POST",
         headers,
         body: JSON.stringify({
@@ -180,12 +180,12 @@ export function useRyoChat({
 
   const detectAndProcessMention = useCallback(
     (input: string): { isMention: boolean; messageContent: string } => {
-      if (input.startsWith("@ryo ")) {
-        // Extract the message content after @ryo
-        const messageContent = input.substring(4).trim();
+      if (input.startsWith("@kassam ")) {
+        // Extract the message content after @kassam
+        const messageContent = input.substring(7).trim();
         return { isMention: true, messageContent };
-      } else if (input === "@ryo") {
-        // If they just typed @ryo without a message, treat it as a nudge
+      } else if (input === "@kassam") {
+        // If they just typed @kassam without a message, treat it as a nudge
         return { isMention: true, messageContent: t("apps.chats.status.nudgeSent") };
       }
       return { isMention: false, messageContent: "" };
@@ -194,10 +194,10 @@ export function useRyoChat({
   );
 
   return {
-    ryoMessages,
-    isRyoLoading,
-    stopRyo,
-    handleRyoMention,
+    kassamMessages,
+    isKassamLoading,
+    stopKassam,
+    handleKassamMention,
     detectAndProcessMention,
   };
 }

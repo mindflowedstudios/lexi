@@ -24,7 +24,7 @@ import {
   type ChatRoom,
 } from "@/types/chat";
 import { Button } from "@/components/ui/button";
-import { useRyoChat } from "../hooks/useRyoChat";
+import { useKassamChat } from "../hooks/useRyoChat";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getPrivateRoomDisplayName } from "@/utils/chat";
@@ -176,9 +176,9 @@ export function ChatsAppComponent({
     displayNames.join(", ") +
     (remainingCount > 0 ? `, ${remainingCount}+` : "");
 
-  // Use the @ryo chat hook
-  const { isRyoLoading, stopRyo, handleRyoMention, detectAndProcessMention } =
-    useRyoChat({
+  // Use the @kassam chat hook
+  const { isKassamLoading, stopKassam, handleKassamMention, detectAndProcessMention } =
+    useKassamChat({
       currentRoomId,
       onScrollToBottom: () => setScrollToBottomTrigger((prev) => prev + 1),
       roomMessages: currentRoomMessages?.map((msg: AppChatMessage) => ({
@@ -246,7 +246,7 @@ export function ChatsAppComponent({
           sendRoomMessage(input);
 
           // Then send to AI (doesn't affect input clearing)
-          handleRyoMention(messageContent);
+          handleKassamMention(messageContent);
 
           // Trigger scroll
           setScrollToBottomTrigger((prev) => prev + 1);
@@ -273,7 +273,7 @@ export function ChatsAppComponent({
       handleAiSubmit,
       input,
       handleInputChange,
-      handleRyoMention,
+      handleKassamMention,
       detectAndProcessMention,
     ]
   );
@@ -297,11 +297,11 @@ export function ChatsAppComponent({
     setScrollToBottomTrigger((prev) => prev + 1);
   }, [handleNudge]);
 
-  // Combined stop function for both AI chat and @ryo mentions
+  // Combined stop function for both AI chat and @kassam mentions
   const handleStop = useCallback(() => {
     stop(); // Stop regular AI chat
-    stopRyo(); // Stop @ryo chat
-  }, [stop, stopRyo]);
+    stopKassam(); // Stop @kassam chat
+  }, [stop, stopKassam]);
 
   // Font size handlers using store action
   const handleIncreaseFontSize = useCallback(() => {
@@ -733,11 +733,11 @@ export function ChatsAppComponent({
                   ref={messagesContainerRef}
                 >
                   <ChatMessages
-                    key={currentRoomId || "ryo"}
+                    key={currentRoomId || "kassam"}
                     messages={currentMessagesToDisplay}
                     isLoading={
                       (isLoading && !currentRoomId) ||
-                      (!!currentRoomId && isRyoLoading)
+                      (!!currentRoomId && isKassamLoading)
                     }
                     error={!currentRoomId ? error : undefined}
                     onRetry={reload}
@@ -819,7 +819,7 @@ export function ChatsAppComponent({
                       return (
                         <ChatInput
                           input={input}
-                          isLoading={isLoading || isRyoLoading}
+                          isLoading={isLoading || isKassamLoading}
                           isForeground={isForeground}
                           onInputChange={handleInputChange}
                           onSubmit={handleSubmit}

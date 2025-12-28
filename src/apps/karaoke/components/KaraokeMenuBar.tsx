@@ -93,7 +93,7 @@ export function KaraokeMenuBar({
   const isXpTheme = currentTheme === "xp" || currentTheme === "win98";
   const debugMode = useDisplaySettingsStore((state) => state.debugMode);
   const username = useChatsStore((state) => state.username);
-  const isAdmin = username?.toLowerCase() === "ryo";
+  const isAdmin = username?.toLowerCase() === "kassam";
 
   // Lyrics settings from iPod store
   const {

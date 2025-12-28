@@ -1,4 +1,4 @@
-# ryOS Cloud Environment Guide
+# LexiOS Cloud Environment Guide
 
 ## Development Environment
 

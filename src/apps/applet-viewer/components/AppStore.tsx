@@ -29,7 +29,7 @@ export function AppStore({ theme, sharedAppletId, focusWindow }: AppStoreProps) 
   const feedRef = useRef<AppStoreFeedRef>(null);
   const username = useChatsStore((state) => state.username);
   const authToken = useChatsStore((state) => state.authToken);
-  const isAdmin = username?.toLowerCase() === "ryo" && !!authToken;
+  const isAdmin = username?.toLowerCase() === "kassam" && !!authToken;
   const isMacTheme = theme === "macosx";
   const isSystem7Theme = theme === "system7";
   const currentTheme = useThemeStore((state) => state.current);

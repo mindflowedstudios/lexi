@@ -51,7 +51,7 @@ async function isAdmin(
   requestId: string
 ): Promise<boolean> {
   if (!username || !token) return false;
-  if (username.toLowerCase() !== "ryo") return false;
+  if (username.toLowerCase() !== "kassam") return false;
 
   const authResult = await validateAuth(username, token, requestId);
   return authResult.valid;

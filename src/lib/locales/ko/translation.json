@@ -36,7 +36,7 @@
       },
       "help": {
         "adminAccess": {
-          "description": "이 앱은 관리자 사용자(ryo)만 접근할 수 있습니다.",
+          "description": "이 앱은 관리자 사용자(lexi)만 접근할 수 있습니다.",
           "title": "관리자 접근"
         },
         "roomManagement": {
@@ -234,8 +234,8 @@
           "title": "앱렛 스토어"
         },
         "createWithRyosChat": {
-          "description": "ryOS 채팅에 사용자 지정 앱 및 앱렛 생성 요청. 아이디어를 공유하고 즉시 작동하는 앱 받기.",
-          "title": "ryOS 채팅으로 만들기"
+          "description": "LexiOS 채팅에 사용자 지정 앱 및 앱렛 생성 요청. 아이디어를 공유하고 즉시 작동하는 앱 받기.",
+          "title": "LexiOS 채팅으로 만들기"
         },
         "keepUpdated": {
           "description": "스토어 메뉴에서 업데이트 확인하여 설치된 앱렛의 최신 버전 받기.",
@@ -250,7 +250,7 @@
           "title": "앱렛 공유"
         },
         "viewApplets": {
-          "description": "ryOS 채팅에서 저장한 앱렛 또는 스토어에서 다운로드한 앱렛 열기 및 실행.",
+          "description": "LexiOS 채팅에서 저장한 앱렛 또는 스토어에서 다운로드한 앱렛 열기 및 실행.",
           "title": "앱렛 보기"
         }
       },
@@ -276,7 +276,7 @@
         "noAppletsOpen": "열린 애플릿 없음",
         "open": "열기...",
         "openAppletStore": "애플릿 스토어 열기",
-        "ryosApp": "ryOS 앱",
+        "ryosApp": "LexiOS 앱",
         "shareApplet": "애플릿 공유...",
         "store": "스토어",
         "untitled": "제목 없음",
@@ -353,7 +353,7 @@
       },
       "help": {
         "chatWithRyo": {
-          "description": "메시지를 입력하여 Ryo와 채팅, 코드 생성 또는 ryOS 도움말 받기.",
+          "description": "메시지를 입력하여 Lexi와 채팅, 코드 생성 또는 LexiOS 도움말 받기.",
           "title": "Ryo와 채팅"
         },
         "controlApps": {
@@ -365,7 +365,7 @@
           "title": "파일 생성 및 편집"
         },
         "joinChatRooms": {
-          "description": "공개 채팅방에서 다른 사용자와 연결. @ryo 언급으로 AI 응답 받기.",
+          "description": "공개 채팅방에서 다른 사용자와 연결. @lexi 언급으로 AI 응답 받기.",
           "title": "채팅방 참가"
         },
         "nudgeDjMode": {
@@ -398,8 +398,8 @@
       },
       "messages": {
         "delete": "삭제",
-        "greeting": "👋 안녕! 나는 ryo야. 뭐든 물어봐!",
-        "ryo": "료",
+        "greeting": "👋 안녕! 나는 lexi야. 뭐든 물어봐!",
+        "ryo": "렉시",
         "you": "나"
       },
       "name": "채팅",
@@ -420,14 +420,14 @@
         "listening": "듣는 중",
         "loginToChat": "채팅에 로그인",
         "loginToContinue": "Ryo와 계속 채팅하려면 로그인하세요.",
-        "loginToRyOS": "ryOS에 로그인",
+        "loginToRyOS": "LexiOS에 로그인",
         "newChat": "새 채팅",
         "noTranscriptionText": "전사된 텍스트를 받지 못했습니다",
         "nudgeSent": "👋 *콕 찌르기 보냄*",
         "recording": "녹음 중...",
         "retry": "다시 시도",
-        "ryo": "@ryo",
-        "ryoWillRespond": "Ryo가 이 메시지에 응답할 것입니다",
+        "ryo": "@lexi",
+        "ryoWillRespond": "Lexi가 이 메시지에 응답할 것입니다",
         "scrollToBottom": "맨 아래로 스크롤",
         "sessionExpired": "세션이 만료되었습니다. 다시 로그인해주세요.",
         "startNewConversation": "새로운 대화를 시작하시겠습니까?",
@@ -628,7 +628,7 @@
       "elevenlabs": "일레븐랩스",
       "elevenlabsVoiceId": "일레븐랩스 음성 ID",
       "formatFileSystem": "파일 시스템 포맷",
-      "formatFileSystemDescription": "샘플 문서, 이미지, 사용자 지정 배경화면을 제외한 모든 파일이 지워집니다. 포맷 후 ryOS가 다시 시작됩니다.",
+      "formatFileSystemDescription": "샘플 문서, 이미지, 사용자 지정 배경화면을 제외한 모든 파일이 지워집니다. 포맷 후 LexiOS가 다시 시작됩니다.",
       "help": {
         "aiModel": {
           "description": "채팅 및 터미널 어시스턴트에서 사용하는 AI 모델 선택",
@@ -662,7 +662,7 @@
       "logIn": "로그인",
       "logOut": "로그아웃",
       "logOutOfAllDevices": "모든 기기에서 로그아웃",
-      "loggedInToRyOS": "ryOS에 로그인됨",
+      "loggedInToRyOS": "LexiOS에 로그인됨",
       "loggingOut": "로그아웃 중...",
       "login": "로그인",
       "loginToSendMessages": "메시지 전송 등 다양한 기능을 위해 로그인하세요",
@@ -686,7 +686,7 @@
       "resetAllSettings": "모든 설정 초기화",
       "resetAllSettingsDescription": "저장된 모든 설정을 지우고 기본값으로 복원합니다.",
       "restore": "복원",
-      "ryOSAccount": "ryOS 계정",
+      "ryOSAccount": "LexiOS 계정",
       "screenSaver": "화면 보호기",
       "screenSaverDescription": "일정 시간 동안 활동이 없으면 활성화됩니다.",
       "screenSaverExitHint": "종료하려면 아무 키나 누르거나 클릭하십시오.",
@@ -1748,10 +1748,10 @@
     "terminal": {
       "commands": {
         "about": "터미널 정보",
-        "ai": "ryo와 AI 채팅 모드 시작",
+        "ai": "lexi와 AI 채팅 모드 시작",
         "cat": "파일 내용 보기",
         "cd": "디렉토리 변경",
-        "chat": "ryo와 채팅 (별칭)",
+        "chat": "lexi와 채팅 (별칭)",
         "clear": "터미널 화면 지우기",
         "cowsay": "말하는 소",
         "date": "현재 날짜/시간 표시",
@@ -1765,7 +1765,7 @@
         "open": "앱, 파일 또는 애플릿 열기",
         "pwd": "현재 디렉토리 표시",
         "rm": "파일을 휴지통으로 이동",
-        "ryo": "ryo와 채팅",
+        "ryo": "lexi와 채팅",
         "su": "사용자 전환 또는 생성",
         "touch": "빈 파일 생성",
         "vim": "vim 편집기에서 파일 열기",
@@ -1774,7 +1774,7 @@
       "description": "명령줄 인터페이스",
       "help": {
         "aiAssistant": {
-          "description": "\"ryo <프롬프트>\"를 입력하여 터미널 내에서 직접 Ryo AI와 채팅.",
+          "description": "\"lexi <프롬프트>\"를 입력하여 터미널 내에서 직접 Lexi AI와 채팅.",
           "title": "AI 어시스턴트"
         },
         "basicCommands": {
@@ -2058,7 +2058,7 @@
     "aboutThisMac": {
       "builtInMemory": "내장 메모리",
       "clickToToggle": "클릭하여 전환",
-      "description": "이 컴퓨터의 ryOS 정보",
+      "description": "이 컴퓨터의 LexiOS 정보",
       "largestUnusedBlock": "가장 큰 사용 가능 블록",
       "mb": "MB",
       "system": "시스템",
@@ -2072,7 +2072,7 @@
     "auth": {
       "createAccount": "계정 만들기",
       "creatingAccount": "만드는 중...",
-      "dialogTitle": "ryOS 로그인",
+      "dialogTitle": "LexiOS 로그인",
       "logIn": "로그인",
       "logOut": "로그아웃",
       "logOutDescription": "로그아웃하시겠습니까? 계정에서 로그아웃됩니다.",
@@ -2166,8 +2166,8 @@
     },
     "htmlPreview": {
       "bannerFallbackTitle": "제목 없는 Applet",
-      "codePreviewTitle": "ryOS 코드 미리보기",
-      "codePreviewTitleFullscreen": "ryOS 코드 미리보기 전체 화면",
+      "codePreviewTitle": "LexiOS 코드 미리보기",
+      "codePreviewTitleFullscreen": "LexiOS 코드 미리보기 전체 화면",
       "copyHtml": "HTML 코드 복사",
       "downloadHtml": "HTML 다운로드",
       "exitFullscreen": "전체 화면 종료",
@@ -2248,16 +2248,16 @@
     "system": {
       "debugBootScreenTest": "디버그 부팅 화면 테스트 중...",
       "formatFileSystem": "파일 시스템 포맷",
-      "formatFileSystemDesc": "파일 시스템을 포맷하시겠습니까? 모든 문서(샘플 문서 제외), 이미지 및 사용자 지정 배경 화면이 영구적으로 삭제됩니다. 포맷 후 ryOS가 다시 시작됩니다.",
+      "formatFileSystemDesc": "파일 시스템을 포맷하시겠습니까? 모든 문서(샘플 문서 제외), 이미지 및 사용자 지정 배경 화면이 영구적으로 삭제됩니다. 포맷 후 LexiOS가 다시 시작됩니다.",
       "formattingFileSystem": "파일 시스템 포맷 중...",
       "rebooting": "재부팅 중...",
       "resetAllSettings": "모든 설정 재설정",
-      "resetAllSettingsDesc": "모든 설정을 재설정하시겠습니까? 저장된 모든 설정이 지워지고 기본 상태로 복원됩니다. 재설정 후 ryOS가 다시 시작됩니다.",
+      "resetAllSettingsDesc": "모든 설정을 재설정하시겠습니까? 저장된 모든 설정이 지워지고 기본 상태로 복원됩니다. 재설정 후 LexiOS가 다시 시작됩니다.",
       "resettingSystem": "시스템 재설정 중...",
       "restoringSystem": "시스템 복원 중...",
       "systemRestoring": "시스템 복원 중...",
-      "updatingToRyOS": "ryOS {{version}}으로(로) 업데이트 중...",
-      "updatingToRyOSWithBuild": "ryOS {{version}} ({{buildNumber}})으로(로) 업데이트 중..."
+      "updatingToRyOS": "LexiOS {{version}}으로(로) 업데이트 중...",
+      "updatingToRyOSWithBuild": "LexiOS {{version}} ({{buildNumber}})으로(로) 업데이트 중..."
     },
     "toast": {
       "alreadyLatestVersion": "이미 최신 버전입니다.",
@@ -2268,7 +2268,7 @@
       "noAssetsToCache": "캐시할 에셋 없음",
       "reboot": "재부팅",
       "total": "총",
-      "updateReady": "ryOS {{version}} ({{buildNumber}}) 업데이트 준비 완료",
+      "updateReady": "LexiOS {{version}} ({{buildNumber}}) 업데이트 준비 완료",
       "updatingAssets": "에셋 업데이트 중",
       "updatingIcons": "아이콘 업데이트 중",
       "updatingSounds": "사운드 업데이트 중",
@@ -2291,7 +2291,7 @@
   "settings": {
     "language": {
       "chineseTraditional": "中文",
-      "description": "ryOS 인터페이스의 기본 언어 선택",
+      "description": "LexiOS 인터페이스의 기본 언어 선택",
       "english": "English",
       "french": "Français",
       "german": "Deutsch",

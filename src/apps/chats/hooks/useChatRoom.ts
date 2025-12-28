@@ -54,7 +54,7 @@ export function useChatRoom(
   } = useChatsStore();
 
   // Derive isAdmin directly from the username
-  const isAdmin = username === "ryo";
+  const isAdmin = username === "kassam";
 
   // Pusher refs
   const pusherRef = useRef<ReturnType<typeof getPusherClient> | null>(null);

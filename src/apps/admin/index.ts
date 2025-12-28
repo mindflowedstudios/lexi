@@ -5,7 +5,7 @@ export const helpItems = [
   {
     icon: "👑",
     title: "Admin Access",
-    description: "This app is only accessible to the admin user (ryo).",
+    description: "This app is only accessible to the admin user (kassam).",
   },
   {
     icon: "👥",
@@ -28,10 +28,9 @@ export const appMetadata = {
   name: "Admin",
   version: "1.0",
   creator: {
-    name: "Ryo Lu",
-    url: "https://ryo.lu",
+    name: "Kassam Khoja",
   },
-  github: "https://github.com/ryokun6/ryos",
+  github: "https://github.com/kassamkhoja/lexi",
   icon: "/icons/default/mac-classic.png",
 };
 

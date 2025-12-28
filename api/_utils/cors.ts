@@ -2,7 +2,7 @@
 
 type VercelEnv = "production" | "preview" | "development";
 
-const PROD_ALLOWED_ORIGIN = "https://os.ryo.lu";
+const PROD_ALLOWED_ORIGIN = "https://lexios.vercel.app";
 const TAILSCALE_ALLOWED_SUFFIX = ".tailb4fa61.ts.net";
 const LOCALHOST_HOSTNAMES = new Set(["localhost", "127.0.0.1", "::1"]);
 const LOCALHOST_PORTS = new Set(["80", "443", "3000", "5173"]);
@@ -13,9 +13,8 @@ const LOCALHOST_PORTS = new Set(["80", "443", "3000", "5173"]);
 // - {project}-git-{branch}-{username}.vercel.app
 // Only allow previews from this specific project to prevent other Vercel apps from accessing the API
 const ALLOWED_VERCEL_PREVIEW_PREFIXES = [
-  "ryos-",      // Main project name
-  "ryo-lu-",    // Username-based prefix
-  "os-ryo-",    // Alternative naming
+  "lexios-",    // Main project name
+  "lexi-",      // Alternative naming
 ];
 
 function getRuntimeEnv(): VercelEnv {

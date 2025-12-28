@@ -213,7 +213,7 @@ export default async function handler(req: Request) {
       // Handle bulk import (admin only)
       if (body.action === "import") {
         // Only admin can bulk import
-        if (username?.toLowerCase() !== "ryo") {
+        if (username?.toLowerCase() !== "kassam") {
           return errorResponse("Forbidden - admin access required for bulk import", 403);
         }
 
@@ -365,7 +365,7 @@ export default async function handler(req: Request) {
       }
 
       // Only admin can delete all songs
-      if (username?.toLowerCase() !== "ryo") {
+      if (username?.toLowerCase() !== "kassam") {
         return errorResponse("Forbidden - admin access required", 403);
       }
 

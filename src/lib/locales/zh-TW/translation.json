@@ -36,7 +36,7 @@
       },
       "help": {
         "adminAccess": {
-          "description": "此應用程式僅限管理員使用者 (ryo) 存取。",
+          "description": "此應用程式僅限管理員使用者 (lexi) 存取。",
           "title": "管理員存取"
         },
         "roomManagement": {
@@ -233,9 +233,9 @@
           "description": "瀏覽並安裝社群的小程式。開啟「商店」選單以發現新應用程式。",
           "title": "小程式商店"
         },
-        "createWithRyosChat": {
-          "description": "請 ryOS 聊天為您建立自訂應用程式和小程式。分享您的想法並立即獲得可用的應用程式。",
-          "title": "使用 ryOS 聊天建立"
+        "createWithLexisChat": {
+          "description": "請 LexiOS 聊天為您建立自訂應用程式和小程式。分享您的想法並立即獲得可用的應用程式。",
+          "title": "使用 LexiOS 聊天建立"
         },
         "keepUpdated": {
           "description": "在「商店」選單中檢查更新以獲得已安裝小程式的最新版本。",
@@ -250,7 +250,7 @@
           "title": "分享小程式"
         },
         "viewApplets": {
-          "description": "開啟並執行從 ryOS 聊天儲存或從商店下載的小程式。",
+          "description": "開啟並執行從 LexiOS 聊天儲存或從商店下載的小程式。",
           "title": "檢視小程式"
         }
       },
@@ -276,7 +276,7 @@
         "noAppletsOpen": "沒有開啟的小程式",
         "open": "開啟...",
         "openAppletStore": "開啟小程式商店",
-        "ryosApp": "ryOS 應用程式",
+        "ryosApp": "LexiOS 應用程式",
         "shareApplet": "分享小程式...",
         "store": "商店",
         "untitled": "未命名",
@@ -312,7 +312,7 @@
         "deleteMessage": "刪除訊息",
         "deleteRoom": "刪除聊天室",
         "leaveConversation": "離開對話",
-        "mentionRyo": "提及 Ryo",
+        "mentionLexi": "提及 Lexi",
         "messageUser": "傳訊息給 {{username}}",
         "newChat": "新增聊天",
         "pushToTalk": "即按即說",
@@ -352,24 +352,24 @@
         "setPasswordTitle": "設定密碼"
       },
       "help": {
-        "chatWithRyo": {
-          "description": "輸入訊息與 Ryo 聊天、產生程式碼或取得 ryOS 的協助。",
-          "title": "與 Ryo 聊天"
+        "chatWithLexi": {
+          "description": "輸入訊息與 Lexi 聊天、產生程式碼或取得 LexiOS 的協助。",
+          "title": "與 Lexi 聊天"
         },
         "controlApps": {
-          "description": "請 Ryo 啟動或關閉應用程式、切換主題或控制 iPod 播放。",
+          "description": "請 Lexi 啟動或關閉應用程式、切換主題或控制 iPod 播放。",
           "title": "控制應用程式"
         },
         "createEditFiles": {
-          "description": "請 Ryo 建立 HTML 小程式、編輯檔案、讀取檔案或搜尋小程式商店。",
+          "description": "請 Lexi 建立 HTML 小程式、編輯檔案、讀取檔案或搜尋小程式商店。",
           "title": "建立與編輯檔案"
         },
         "joinChatRooms": {
-          "description": "在公開聊天室中與他人聯繫。提及 @ryo 以獲得 AI 回應。",
+          "description": "在公開聊天室中與他人聯繫。提及 @lexi 以獲得 AI 回應。",
           "title": "加入聊天室"
         },
         "nudgeDjMode": {
-          "description": "傳送 👋 輕推以獲得情境感知提示。播放音樂時 Ryo 會變成 DJ。",
+          "description": "傳送 👋 輕推以獲得情境感知提示。播放音樂時 Lexi 會變成 DJ。",
           "title": "輕推與 DJ 模式"
         },
         "pushToTalk": {
@@ -398,8 +398,8 @@
       },
       "messages": {
         "delete": "刪除",
-        "greeting": "👋 我是 ryo，什麼都可以問我！",
-        "ryo": "Ryo",
+        "greeting": "👋 我是 lexi，什麼都可以問我！",
+        "lexi": "Lexi",
         "you": "您"
       },
       "name": "聊天",
@@ -419,15 +419,15 @@
         "leave": "離開",
         "listening": "聆聽中",
         "loginToChat": "登入聊天",
-        "loginToContinue": "登入以繼續與 Ryo 聊天。",
-        "loginToRyOS": "登入 ryOS",
+        "loginToContinue": "登入以繼續與 Lexi 聊天。",
+        "loginToRyOS": "登入 LexiOS",
         "newChat": "新聊天",
         "noTranscriptionText": "未收到轉錄文字。",
         "nudgeSent": "👋 *輕推已送出*",
         "recording": "正在錄音...",
         "retry": "重試",
-        "ryo": "@ryo",
-        "ryoWillRespond": "Ryo 將回覆此訊息。",
+        "lexi": "@lexi",
+        "ryoWillRespond": "Lexi 將回覆此訊息。",
         "scrollToBottom": "捲動至底部",
         "sessionExpired": "工作階段已過期。請重新登入。",
         "startNewConversation": "開始新的對話？",
@@ -628,7 +628,7 @@
       "elevenlabs": "ElevenLabs",
       "elevenlabsVoiceId": "ElevenLabs 語音 ID",
       "formatFileSystem": "格式化檔案系統",
-      "formatFileSystemDescription": "這將清除所有檔案（範例檔案除外）、圖片和自訂桌布。格式化後 ryOS 將重新啟動。",
+      "formatFileSystemDescription": "這將清除所有檔案（範例檔案除外）、圖片和自訂桌布。格式化後 LexiOS 將重新啟動。",
       "help": {
         "aiModel": {
           "description": "選擇聊天和終端機助理使用的 AI 模型",
@@ -662,7 +662,7 @@
       "logIn": "登入",
       "logOut": "登出",
       "logOutOfAllDevices": "登出所有裝置",
-      "loggedInToRyOS": "已登入 ryOS",
+      "loggedInToRyOS": "已登入 LexiOS",
       "loggingOut": "登出中...",
       "login": "登入",
       "loginToSendMessages": "登入以傳送訊息及更多功能",
@@ -686,7 +686,7 @@
       "resetAllSettings": "重設所有設定",
       "resetAllSettingsDescription": "這將清除所有已儲存的設定並還原為預設值。",
       "restore": "還原",
-      "ryOSAccount": "ryOS 帳戶",
+      "LexiOSAccount": "LexiOS 帳戶",
       "screenSaver": "螢幕保護程式",
       "screenSaverDescription": "在閒置一段時間後啟用",
       "screenSaverExitHint": "點擊或按下任何鍵即可退出",
@@ -1340,7 +1340,7 @@
           "title": "與 iPod 同步"
         },
         "worksWithChats": {
-          "description": "透過聊天請 Ryo 播放歌曲、控制播放或調整設定。",
+          "description": "透過聊天請 Lexi 播放歌曲、控制播放或調整設定。",
           "title": "與聊天整合"
         }
       },
@@ -1748,10 +1748,10 @@
     "terminal": {
       "commands": {
         "about": "關於終端機",
-        "ai": "進入與 ryo 的 AI 聊天模式",
+        "ai": "進入與 lexi 的 AI 聊天模式",
         "cat": "檢視檔案內容",
         "cd": "變更目錄",
-        "chat": "與 ryo 聊天 (別名)",
+        "chat": "與 lexi 聊天 (別名)",
         "clear": "清除終端機畫面",
         "cowsay": "一隻會說話的牛",
         "date": "顯示目前日期/時間",
@@ -1765,7 +1765,7 @@
         "open": "開啟應用程式、檔案或小程式",
         "pwd": "顯示目前目錄",
         "rm": "將檔案移至垃圾桶",
-        "ryo": "與 ryo 聊天",
+        "lexi": "與 lexi 聊天",
         "su": "切換或建立使用者",
         "touch": "建立空白檔案",
         "vim": "在 vim 編輯器中開啟檔案",
@@ -1774,7 +1774,7 @@
       "description": "命令列介面",
       "help": {
         "aiAssistant": {
-          "description": "輸入「ryo <提示>」以直接在終端機內與 Ryo AI 聊天。",
+          "description": "輸入「lexi <提示>」以直接在終端機內與 Lexi AI 聊天。",
           "title": "AI 助理"
         },
         "basicCommands": {
@@ -1810,9 +1810,9 @@
       "name": "終端機",
       "output": {
         "addedAndStartedPlaying": "已新增並開始播放新歌曲",
-        "askRyoAnything": "問 Ryo 任何事。輸入 'exit' 返回終端機。",
-        "askRyoWithPrompt": "問 Ryo 任何事。輸入 'exit' 返回終端機。\n→ 來自您的指令：{{prompt}}",
-        "chatCleared": "對話已清除。您仍在與 Ryo 對話。輸入 'exit' 返回終端機。",
+        "askLexiAnything": "問 Lexi 任何事。輸入 'exit' 返回終端機。",
+        "askLexiWithPrompt": "問 Lexi 任何事。輸入 'exit' 返回終端機。\n→ 來自您的指令：{{prompt}}",
+        "chatCleared": "對話已清除。您仍在與 Lexi 對話。輸入 'exit' 返回終端機。",
         "commandNotFound": "找不到指令：{{cmd}}。輸入 'help' 以查看可用指令清單。",
         "contentWritten": "內容已寫入",
         "fileCreated": "檔案已建立",
@@ -1889,7 +1889,7 @@
           "title": "富文字編輯"
         },
         "slashCommands": {
-          "description": "輸入 / 以快速操作，或讓 Ryo AI 遠端編輯行",
+          "description": "輸入 / 以快速操作，或讓 Lexi AI 遠端編輯行",
           "title": "斜線指令"
         },
         "voiceDictation": {
@@ -2058,7 +2058,7 @@
     "aboutThisMac": {
       "builtInMemory": "內建記憶體",
       "clickToToggle": "按一下以切換",
-      "description": "關於此電腦上的 ryOS 資訊",
+      "description": "關於此電腦上的 LexiOS 資訊",
       "largestUnusedBlock": "最大未用區塊",
       "mb": "MB",
       "system": "系統",
@@ -2072,7 +2072,7 @@
     "auth": {
       "createAccount": "建立帳戶",
       "creatingAccount": "正在建立...",
-      "dialogTitle": "ryOS 登入",
+      "dialogTitle": "LexiOS 登入",
       "logIn": "登入",
       "logOut": "登出",
       "logOutDescription": "您確定要登出嗎？您將會從您的帳戶登出。",
@@ -2166,8 +2166,8 @@
     },
     "htmlPreview": {
       "bannerFallbackTitle": "未命名 Applet",
-      "codePreviewTitle": "ryOS 程式碼預覽",
-      "codePreviewTitleFullscreen": "ryOS 程式碼預覽全螢幕",
+      "codePreviewTitle": "LexiOS 程式碼預覽",
+      "codePreviewTitleFullscreen": "LexiOS 程式碼預覽全螢幕",
       "copyHtml": "複製 HTML 程式碼",
       "downloadHtml": "下載 HTML",
       "exitFullscreen": "結束全螢幕",
@@ -2248,16 +2248,16 @@
     "system": {
       "debugBootScreenTest": "偵錯開機畫面測試...",
       "formatFileSystem": "格式化檔案系統",
-      "formatFileSystemDesc": "您確定要格式化檔案系統嗎？這將永久刪除所有檔案（範例檔案除外）、圖片和自訂桌布。格式化後 ryOS 將重新啟動。",
+      "formatFileSystemDesc": "您確定要格式化檔案系統嗎？這將永久刪除所有檔案（範例檔案除外）、圖片和自訂桌布。格式化後 LexiOS 將重新啟動。",
       "formattingFileSystem": "格式化檔案系統...",
       "rebooting": "重新開機中...",
       "resetAllSettings": "重設所有設定",
-      "resetAllSettingsDesc": "您確定要重設所有設定嗎？這將清除所有已儲存的設定並還原為預設狀態。重設後 ryOS 將重新啟動。",
+      "resetAllSettingsDesc": "您確定要重設所有設定嗎？這將清除所有已儲存的設定並還原為預設狀態。重設後 LexiOS 將重新啟動。",
       "resettingSystem": "重設系統中...",
       "restoringSystem": "還原系統中...",
       "systemRestoring": "系統還原中...",
-      "updatingToRyOS": "更新至 ryOS {{version}}...",
-      "updatingToRyOSWithBuild": "更新至 ryOS {{version}} ({{buildNumber}})..."
+      "updatingToRyOS": "更新至 LexiOS {{version}}...",
+      "updatingToRyOSWithBuild": "更新至 LexiOS {{version}} ({{buildNumber}})..."
     },
     "toast": {
       "alreadyLatestVersion": "已經是最新版本",
@@ -2268,7 +2268,7 @@
       "noAssetsToCache": "無資產可快取",
       "reboot": "重新啟動",
       "total": "總計",
-      "updateReady": "ryOS {{version}} ({{buildNumber}}) 的更新已就緒",
+      "updateReady": "LexiOS {{version}} ({{buildNumber}}) 的更新已就緒",
       "updatingAssets": "正在更新資產",
       "updatingIcons": "正在更新圖示",
       "updatingSounds": "正在更新音效",
@@ -2291,7 +2291,7 @@
   "settings": {
     "language": {
       "chineseTraditional": "中文",
-      "description": "選擇您的 ryOS 介面偏好語言",
+      "description": "選擇您的 LexiOS 介面偏好語言",
       "english": "English",
       "french": "Français",
       "german": "Deutsch",

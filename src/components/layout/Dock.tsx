@@ -568,7 +568,7 @@ function MacDock() {
   
   // Get current username for admin check
   const username = useChatsStore((state) => state.username);
-  const isAdmin = username?.toLowerCase() === "ryo";
+  const isAdmin = username?.toLowerCase() === "kassam";
   
   // Dock store for customization
   const { 

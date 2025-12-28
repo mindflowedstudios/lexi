@@ -26,7 +26,7 @@ export const APPLET_AUTH_BRIDGE_SCRIPT = `
         try {
           window.__RYOS_APPLET_AUTH = currentAuthPayload || {};
         } catch (err) {
-          console.warn("[ryOS] Failed to expose applet auth payload:", err);
+          console.warn("[LexiOS] Failed to expose applet auth payload:", err);
         }
         resolve(null);
       };
@@ -39,7 +39,7 @@ export const APPLET_AUTH_BRIDGE_SCRIPT = `
           window.parent.postMessage({ type: CHANNEL, action: "request" }, "*");
         }
       } catch (err) {
-        console.warn("[ryOS] Applet auth request failed:", err);
+        console.warn("[LexiOS] Applet auth request failed:", err);
       }
     };
 
@@ -71,7 +71,7 @@ export const APPLET_AUTH_BRIDGE_SCRIPT = `
           try {
             window.__RYOS_APPLET_AUTH = currentAuthPayload || {};
           } catch (err) {
-            console.warn("[ryOS] Failed to refresh applet auth payload:", err);
+            console.warn("[LexiOS] Failed to refresh applet auth payload:", err);
           }
           return;
         }

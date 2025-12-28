@@ -1,6 +1,6 @@
 /**
  * Admin API endpoints
- * Only accessible by the admin user (ryo)
+ * Only accessible by the admin user (kassam)
  */
 
 import type { VercelRequest, VercelResponse } from "@vercel/node";
@@ -63,7 +63,7 @@ async function isAdmin(
   requestId: string
 ): Promise<boolean> {
   if (!username || !token) return false;
-  if (username.toLowerCase() !== "ryo") return false;
+  if (username.toLowerCase() !== "kassam") return false;
 
   const authResult = await validateAuth(username, token, requestId);
   return authResult.valid;
@@ -80,7 +80,7 @@ async function deleteUser(
   const normalizedUsername = targetUsername.toLowerCase();
 
   // Don't allow deleting the admin
-  if (normalizedUsername === "ryo") {
+  if (normalizedUsername === "kassam") {
     return { success: false, error: "Cannot delete admin user" };
   }
 
@@ -294,7 +294,7 @@ async function banUser(
   const normalizedUsername = targetUsername.toLowerCase();
 
   // Don't allow banning the admin
-  if (normalizedUsername === "ryo") {
+  if (normalizedUsername === "kassam") {
     return { success: false, error: "Cannot ban admin user" };
   }
 

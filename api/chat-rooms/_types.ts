@@ -100,7 +100,7 @@ export interface SetPasswordData {
   password: string;
 }
 
-export interface GenerateRyoReplyData {
+export interface GenerateKassamReplyData {
   roomId: string;
   prompt: string;
   systemState?: {

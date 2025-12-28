@@ -236,7 +236,7 @@ export const UserProfilePanel: React.FC<UserProfilePanelProps> = ({
     );
   }
 
-  const isTargetAdmin = username.toLowerCase() === "ryo";
+  const isTargetAdmin = username.toLowerCase() === "kassam";
 
   // Skeleton placeholder component
   const Skeleton = ({ className }: { className?: string }) => (

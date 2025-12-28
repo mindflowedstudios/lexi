@@ -39,8 +39,8 @@ export async function checkAndIncrementAIMessageCount(
   // Set limit based on authentication status
   const limit = isAnonymous ? AI_LIMIT_ANON_PER_5_HOURS : AI_LIMIT_PER_5_HOURS;
 
-  // Identify privileged user (ryo)
-  const isRyo = identifier === "ryo";
+  // Identify privileged user (kassam)
+  const isKassam = identifier === "kassam";
 
   // --- Authentication validation section ---
   // If authenticated, validate the token
@@ -57,16 +57,16 @@ export async function checkAndIncrementAIMessageCount(
       };
     }
 
-    // If the request is from ryo **and** the token is valid, bypass rate limits entirely
-    if (isRyo) {
+    // If the request is from kassam **and** the token is valid, bypass rate limits entirely
+    if (isKassam) {
       const currentCount = await redis.get<string>(key);
       const count = currentCount ? parseInt(currentCount, 10) : 0;
       return { allowed: true, count, limit };
     }
   }
 
-  // If the user *claims* to be ryo but is **not** authenticated, deny the request outright
-  if (isRyo) {
+  // If the user *claims* to be kassam but is **not** authenticated, deny the request outright
+  if (isKassam) {
     return {
       allowed: false,
       count: 0,

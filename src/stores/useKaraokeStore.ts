@@ -189,7 +189,7 @@ export const useKaraokeStore = create<KaraokeState>()(
       setFullScreen: (fullScreen) => set({ isFullScreen: fullScreen }),
     }),
     {
-      name: "ryos:karaoke",
+      name: "lexios:karaoke",
       version: CURRENT_KARAOKE_STORE_VERSION,
       partialize: (state) => ({
         currentSongId: state.currentSongId,

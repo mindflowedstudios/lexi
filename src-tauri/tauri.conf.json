@@ -1,7 +1,7 @@
 {
-  "productName": "ryOS",
-  "version": "1.0.1",
-  "identifier": "lu.ryo.os",
+  "productName": "LexiOS",
+  "version": "1.0.0",
+  "identifier": "app.lexios",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:5173",
@@ -42,10 +42,10 @@
     ],
     "resources": [],
     "externalBin": [],
-    "copyright": "Copyright Ryo Lu",
+    "copyright": "Made with love by Kassam for Lexi",
     "category": "Utility",
-    "shortDescription": "An AI OS experience",
-    "longDescription": "An AI OS experience, made with Cursor",
+    "shortDescription": "A love letter in the form of an OS",
+    "longDescription": "A love letter in the form of an OS, made for Lexi",
     "macOS": {
       "minimumSystemVersion": "10.13",
       "infoPlist": "./Info.plist",

@@ -1,16 +1,26 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 
 const COLORS = [
-  "#FF0000", // Red
-  "#FF7F00", // Orange
-  "#FFFF00", // Yellow
-  "#00FF00", // Green
-  "#0000FF", // Blue
-  "#4B0082", // Indigo
-  "#9400D3", // Violet
-  "#FF1493", // Deep Pink
-  "#00FFFF", // Cyan
   "#FF69B4", // Hot Pink
+  "#FF1493", // Deep Pink
+  "#FF6B6B", // Coral
+  "#E91E63", // Pink
+  "#FF4081", // Pink Accent
+  "#F48FB1", // Light Pink
+  "#FF0000", // Red (for love)
+  "#FF7F00", // Orange
+  "#9C27B0", // Purple
+  "#E040FB", // Purple Accent
+];
+
+// Love messages that rotate with the logo
+const LOVE_MESSAGES = [
+  "I Love You Lexi",
+  "LexiOS",
+  "My Love ❤️",
+  "Forever Yours",
+  "You're Beautiful",
+  "17th Avenue ❤️",
 ];
 
 export function BouncingLogo() {
@@ -18,6 +28,7 @@ export function BouncingLogo() {
   const [position, setPosition] = useState({ x: 100, y: 100 });
   const [velocity, setVelocity] = useState({ x: 2, y: 2 });
   const [colorIndex, setColorIndex] = useState(0);
+  const [messageIndex, setMessageIndex] = useState(0);
 
   // Calculate logo size based on viewport width (30% of viewport width)
   const getLogoSize = useCallback(() => {
@@ -73,6 +84,10 @@ export function BouncingLogo() {
       if (bounced) {
         currentColor = (currentColor + 1) % COLORS.length;
         setColorIndex(currentColor);
+        // Change message every few bounces
+        if (currentColor % 3 === 0) {
+          setMessageIndex((prev) => (prev + 1) % LOVE_MESSAGES.length);
+        }
       }
 
       currentPos = { x: newX, y: newY };
@@ -104,22 +119,22 @@ export function BouncingLogo() {
         }}
       >
         <svg
-          viewBox="0 0 120 60"
+          viewBox="0 0 200 60"
           className="w-full h-full"
           style={{ color: COLORS[colorIndex] }}
         >
-          {/* ryOS logo */}
+          {/* Love messages that rotate */}
           <text
             x="50%"
             y="50%"
             dominantBaseline="middle"
             textAnchor="middle"
             fill="currentColor"
-            fontSize="36"
+            fontSize="28"
             fontFamily="system-ui, -apple-system, sans-serif"
             fontWeight="bold"
           >
-            ryOS
+            {LOVE_MESSAGES[messageIndex]}
           </text>
         </svg>
       </div>

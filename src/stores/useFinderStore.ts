@@ -37,7 +37,7 @@ interface FinderStoreState {
   getForegroundInstance: () => FinderInstance | null;
 }
 
-const STORE_NAME = "ryos:finder";
+const STORE_NAME = "lexios:finder";
 
 export const useFinderStore = create<FinderStoreState>()(
   persist(

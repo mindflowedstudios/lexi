@@ -118,7 +118,7 @@ export function AdminAppComponent({
   const [isDeletingAll, setIsDeletingAll] = useState(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const isAdmin = username?.toLowerCase() === "ryo";
+  const isAdmin = username?.toLowerCase() === "kassam";
   const selectedRoom = rooms.find((r) => r.id === selectedRoomId) || null;
 
   // Fetch stats
@@ -894,7 +894,7 @@ export function AdminAppComponent({
                                     <Ban className="h-2.5 w-2.5" />
                                     {t("apps.admin.user.banned")}
                                   </span>
-                                ) : user.username.toLowerCase() === "ryo" ? (
+                                ) : user.username.toLowerCase() === "kassam" ? (
                                   <span className="px-1.5 py-0.5 text-[9px] bg-blue-100 text-blue-700 rounded">
                                     {t("apps.admin.user.admin")}
                                   </span>
@@ -908,7 +908,7 @@ export function AdminAppComponent({
                                 {formatRelativeTime(user.lastActive)}
                               </TableCell>
                               <TableCell>
-                                {user.username !== "ryo" && (
+                                {user.username !== "kassam" && (
                                   <Button
                                     variant="ghost"
                                     size="sm"

@@ -495,7 +495,7 @@ const showBackgroundedMessageNotification = (message: UIMessage) => {
   const preview = textContent.replace(/\s+/g, " ").trim().slice(0, 100);
 
   // Show notification similar to room chat toasts
-  toast(`@Ryo`, {
+  toast(`@Kassam`, {
     description: preview + (textContent.length > 100 ? "…" : ""),
     duration: 6000,
     action: {
@@ -2143,7 +2143,7 @@ export function useAiChat(onPromptSetUsername?: () => void) {
                 hour12: true,
               })
             : "";
-          const sender = msg.role === "user" ? username || "You" : "Ryo";
+          const sender = msg.role === "user" ? username || "You" : "Kassam";
           const content = getAssistantVisibleText(msg);
           return `**${sender}** (${time}):\n${content}`;
         })

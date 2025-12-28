@@ -8,7 +8,7 @@ import { getCachedSongMetadata, listAllCachedSongMetadata } from "@/utils/songMe
 import i18n from "@/lib/i18n";
 import { useChatsStore } from "./useChatsStore";
 
-/** Special value for lyricsTranslationLanguage that means "use ryOS locale" */
+/** Special value for lyricsTranslationLanguage that means "use LexiOS locale" */
 export const LYRICS_TRANSLATION_AUTO = "auto";
 
 /** Lyrics source from Kugou */
@@ -866,9 +866,9 @@ export const useIpodStore = create<IpodState>()(
           try {
             const url = new URL(input);
 
-            // Handle os.ryo.lu/ipod/:id or os.ryo.lu/karaoke/:id format
+            // Handle lexios.vercel.app/ipod/:id or lexios.vercel.app/karaoke/:id format
             if (
-              url.hostname === "os.ryo.lu" &&
+              url.hostname === "lexios.vercel.app" &&
               (url.pathname.startsWith("/ipod/") || url.pathname.startsWith("/karaoke/"))
             ) {
               return url.pathname.split("/")[2] || null;
@@ -1214,7 +1214,7 @@ export const useIpodStore = create<IpodState>()(
       },
     }),
     {
-      name: "ryos:ipod", // Unique name for localStorage persistence
+      name: "lexios:ipod", // Unique name for localStorage persistence
       version: CURRENT_IPOD_STORE_VERSION, // Set the current version
       partialize: (state) => ({
         tracks: state.tracks,
@@ -1328,7 +1328,7 @@ export const useIpodStore = create<IpodState>()(
 
 /**
  * Resolves the effective translation language.
- * If the stored value is "auto", returns the current ryOS locale language.
+ * If the stored value is "auto", returns the current LexiOS locale language.
  * If null, returns null (meaning no translation / "Original").
  * Otherwise returns the stored language code.
  */

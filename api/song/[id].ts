@@ -1270,7 +1270,7 @@ Output:
         }
 
         // Only admin can unshare
-        if (username?.toLowerCase() !== "ryo") {
+        if (username?.toLowerCase() !== "kassam") {
           return errorResponse("Forbidden - admin access required", 403);
         }
 
@@ -1332,7 +1332,7 @@ Output:
       // Determine createdBy
       let createdBy = existingSong?.createdBy;
       if (isShare) {
-        const canSetCreatedBy = username?.toLowerCase() === "ryo" || !existingSong?.createdBy;
+        const canSetCreatedBy = username?.toLowerCase() === "kassam" || !existingSong?.createdBy;
         if (canSetCreatedBy) {
           createdBy = username || undefined;
         }
@@ -1386,7 +1386,7 @@ Output:
       }
 
       // Only admin can delete
-      if (username?.toLowerCase() !== "ryo") {
+      if (username?.toLowerCase() !== "kassam") {
         return errorResponse("Forbidden - admin access required", 403);
       }
 

@@ -14,7 +14,7 @@ import { whoamiCommand } from "./whoami";
 import { dateCommand } from "./date";
 import { cowsayCommand } from "./cowsay";
 import { aboutCommand } from "./about";
-import { aiCommand, chatCommand, ryoCommand } from "./ai";
+import { aiCommand, chatCommand, kassamCommand } from "./ai";
 import { vimCommand } from "./vim";
 import { openCommand } from "./open";
 
@@ -35,7 +35,7 @@ export const commands: Record<string, Command> = {
   about: aboutCommand,
   ai: aiCommand,
   chat: chatCommand,
-  ryo: ryoCommand,
+  kassam: kassamCommand,
   vim: vimCommand,
   open: openCommand,
 };

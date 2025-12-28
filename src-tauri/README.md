@@ -1,6 +1,6 @@
 # Tauri Desktop App
 
-This directory contains the Tauri backend for the ryOS desktop application.
+This directory contains the Tauri backend for the LexiOS desktop application.
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ This generates all platform-specific icon formats from the source `icon.png` fil
 ## Security
 
 The app uses a Content Security Policy (CSP) configured in `tauri.conf.json` that allows:
-- API calls to `os.ryo.lu` and other external services
+- API calls to `lexios.vercel.app` and other external services
 - YouTube embeds
 - Pusher WebSocket connections
 - Various external resources needed by the app

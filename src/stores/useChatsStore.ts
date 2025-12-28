@@ -314,7 +314,7 @@ const getInitialState = (): Omit<
 };
 
 const STORE_VERSION = 2;
-const STORE_NAME = "ryos:chats";
+const STORE_NAME = "lexios:chats";
 
 export const useChatsStore = create<ChatsStoreState>()(
   persist(

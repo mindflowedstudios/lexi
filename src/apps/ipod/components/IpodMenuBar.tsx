@@ -148,7 +148,7 @@ export function IpodMenuBar({
   const isXpTheme = appTheme === "xp" || appTheme === "win98";
   const debugMode = useDisplaySettingsStore((state) => state.debugMode);
   const username = useChatsStore((state) => state.username);
-  const isAdmin = username?.toLowerCase() === "ryo";
+  const isAdmin = username?.toLowerCase() === "kassam";
 
   // Compute currentIndex from currentSongId
   const currentIndex = useMemo(() => {

@@ -36,7 +36,7 @@
       },
       "help": {
         "adminAccess": {
-          "description": "このアプリは管理者ユーザー (ryo) のみがアクセスできます。",
+          "description": "このアプリは管理者ユーザー (lexi) のみがアクセスできます。",
           "title": "管理者アクセス"
         },
         "roomManagement": {
@@ -233,9 +233,9 @@
           "description": "コミュニティからアプレットを閲覧・インストール。ストアメニューを開いて新しいアプリを発見。",
           "title": "アプレットストア"
         },
-        "createWithRyosChat": {
-          "description": "ryOSチャットにカスタムアプリとアプレットの作成を依頼。アイデアを共有して即座に動作するアプリを取得。",
-          "title": "ryOSチャットで作成"
+        "createWithLexisChat": {
+          "description": "LexiOSチャットにカスタムアプリとアプレットの作成を依頼。アイデアを共有して即座に動作するアプリを取得。",
+          "title": "LexiOSチャットで作成"
         },
         "keepUpdated": {
           "description": "ストアメニューで更新を確認して、インストール済みアプレットの最新バージョンを取得。",
@@ -250,7 +250,7 @@
           "title": "アプレットを共有"
         },
         "viewApplets": {
-          "description": "ryOSチャットから保存したアプレットまたはストアからダウンロードしたアプレットを開いて実行。",
+          "description": "LexiOSチャットから保存したアプレットまたはストアからダウンロードしたアプレットを開いて実行。",
           "title": "アプレットを表示"
         }
       },
@@ -276,7 +276,7 @@
         "noAppletsOpen": "アプレットは開いていません",
         "open": "開く...",
         "openAppletStore": "アプレットストアを開く",
-        "ryosApp": "ryOSアプリ",
+        "ryosApp": "LexiOSアプリ",
         "shareApplet": "アプレットを共有...",
         "store": "ストア",
         "untitled": "無題",
@@ -312,7 +312,7 @@
         "deleteMessage": "メッセージを削除",
         "deleteRoom": "ルームを削除",
         "leaveConversation": "会話を退出",
-        "mentionRyo": "Ryoをメンション",
+        "mentionLexi": "Lexiをメンション",
         "messageUser": "{{username}}にメッセージを送信",
         "newChat": "新しいチャット",
         "pushToTalk": "プッシュトゥトーク",
@@ -352,24 +352,24 @@
         "setPasswordTitle": "パスワードを設定"
       },
       "help": {
-        "chatWithRyo": {
-          "description": "メッセージを入力してRyoとチャット、コードを生成、またはryOSのヘルプを取得。",
-          "title": "Ryoとチャット"
+        "chatWithLexi": {
+          "description": "メッセージを入力してLexiとチャット、コードを生成、またはLexiOSのヘルプを取得。",
+          "title": "Lexiとチャット"
         },
         "controlApps": {
-          "description": "Ryoにアプリの起動または終了、テーマの切り替え、iPodの再生制御を依頼。",
+          "description": "Lexiにアプリの起動または終了、テーマの切り替え、iPodの再生制御を依頼。",
           "title": "アプリの制御"
         },
         "createEditFiles": {
-          "description": "RyoにHTMLアプレットの作成、書類の編集、ファイルの読み取り、アプレットストアの検索を依頼。",
+          "description": "LexiにHTMLアプレットの作成、書類の編集、ファイルの読み取り、アプレットストアの検索を依頼。",
           "title": "ファイルの作成と編集"
         },
         "joinChatRooms": {
-          "description": "公開チャットルームで他のユーザーと接続。@ryoに言及してAI応答を取得。",
+          "description": "公開チャットルームで他のユーザーと接続。@lexiに言及してAI応答を取得。",
           "title": "チャットルームに参加"
         },
         "nudgeDjMode": {
-          "description": "👋ナッジを送信してコンテキスト対応のヒントを取得。音楽が再生中の場合、RyoがDJになります。",
+          "description": "👋ナッジを送信してコンテキスト対応のヒントを取得。音楽が再生中の場合、LexiがDJになります。",
           "title": "ナッジとDJモード"
         },
         "pushToTalk": {
@@ -399,7 +399,7 @@
       "messages": {
         "delete": "削除",
         "greeting": "👋 やあ！リョウだよ。何でも聞いてね！",
-        "ryo": "リョウ",
+        "lexi": "リョウ",
         "you": "あなた"
       },
       "name": "チャット",
@@ -419,15 +419,15 @@
         "leave": "退出",
         "listening": "聴取中",
         "loginToChat": "チャットにログイン",
-        "loginToContinue": "Ryoとのチャットを続けるにはログインしてください。",
-        "loginToRyOS": "ryOSにログイン",
+        "loginToContinue": "Lexiとのチャットを続けるにはログインしてください。",
+        "loginToRyOS": "LexiOSにログイン",
         "newChat": "新しいチャット",
         "noTranscriptionText": "文字起こしテキストが受信されませんでした",
         "nudgeSent": "👋 *つつき送信済み*",
         "recording": "録音中...",
         "retry": "再試行",
-        "ryo": "@ryo",
-        "ryoWillRespond": "Ryoがこのメッセージに返信します",
+        "lexi": "@lexi",
+        "ryoWillRespond": "Lexiがこのメッセージに返信します",
         "scrollToBottom": "一番下までスクロール",
         "sessionExpired": "セッションの有効期限が切れました。もう一度ログインしてください。",
         "startNewConversation": "新しい会話を開始しますか？",
@@ -628,7 +628,7 @@
       "elevenlabs": "ElevenLabs",
       "elevenlabsVoiceId": "ElevenLabs 音声ID",
       "formatFileSystem": "ファイルシステムをフォーマット",
-      "formatFileSystemDescription": "これにより、すべてのファイル（サンプルドキュメントを除く）、画像、カスタム壁紙が消去されます。フォーマット後、ryOSは再起動します。",
+      "formatFileSystemDescription": "これにより、すべてのファイル（サンプルドキュメントを除く）、画像、カスタム壁紙が消去されます。フォーマット後、LexiOSは再起動します。",
       "help": {
         "aiModel": {
           "description": "チャットとターミナルアシスタントで使用するAIモデルを選択",
@@ -662,7 +662,7 @@
       "logIn": "ログイン",
       "logOut": "ログアウト",
       "logOutOfAllDevices": "すべてのデバイスからログアウト",
-      "loggedInToRyOS": "ryOSにログイン済み",
+      "loggedInToRyOS": "LexiOSにログイン済み",
       "loggingOut": "ログアウト中...",
       "login": "ログイン",
       "loginToSendMessages": "メッセージの送信などにはログイン",
@@ -686,7 +686,7 @@
       "resetAllSettings": "すべての設定をリセット",
       "resetAllSettingsDescription": "これにより、保存されているすべての設定が消去され、初期設定に戻ります。",
       "restore": "復元",
-      "ryOSAccount": "ryOS アカウント",
+      "LexiOSAccount": "LexiOS アカウント",
       "screenSaver": "スクリーンセーバー",
       "screenSaverDescription": "一定時間操作がないと起動します",
       "screenSaverExitHint": "クリックまたは、いずれかのキーを押して終了",
@@ -1340,7 +1340,7 @@
           "title": "iPodと同期"
         },
         "worksWithChats": {
-          "description": "Ryoに曲の再生、操作、設定変更をチャットで依頼できます。",
+          "description": "Lexiに曲の再生、操作、設定変更をチャットで依頼できます。",
           "title": "チャットと連携"
         }
       },
@@ -1748,10 +1748,10 @@
     "terminal": {
       "commands": {
         "about": "ターミナルについて",
-        "ai": "ryoとAIチャットモードに入る",
+        "ai": "lexiとAIチャットモードに入る",
         "cat": "ファイルの内容を表示",
         "cd": "ディレクトリを変更",
-        "chat": "ryoとチャット (エイリアス)",
+        "chat": "lexiとチャット (エイリアス)",
         "clear": "ターミナル画面をクリア",
         "cowsay": "しゃべる牛",
         "date": "現在の日時を表示",
@@ -1765,7 +1765,7 @@
         "open": "アプリ、ファイル、またはアプレットを開く",
         "pwd": "現在のディレクトリを表示",
         "rm": "ファイルをゴミ箱に移動",
-        "ryo": "ryoとチャット",
+        "lexi": "lexiとチャット",
         "su": "ユーザーを切り替えるか作成",
         "touch": "空のファイルを作成",
         "vim": "vimエディタでファイルを開く",
@@ -1774,7 +1774,7 @@
       "description": "コマンドラインインターフェース",
       "help": {
         "aiAssistant": {
-          "description": "「ryo <プロンプト>」と入力して、ターミナル内で直接Ryo AIとチャット。",
+          "description": "「lexi <プロンプト>」と入力して、ターミナル内で直接Lexi AIとチャット。",
           "title": "AIアシスタント"
         },
         "basicCommands": {
@@ -1810,8 +1810,8 @@
       "name": "ターミナル",
       "output": {
         "addedAndStartedPlaying": "新しい曲を追加して再生を開始しました",
-        "askRyoAnything": "リョウに何でも質問してください。「exit」と入力するとターミナルに戻ります。",
-        "askRyoWithPrompt": "リョウに何でも質問してください。「exit」と入力するとターミナルに戻ります。\n→ あなたのコマンド: {{prompt}}",
+        "askLexiAnything": "リョウに何でも質問してください。「exit」と入力するとターミナルに戻ります。",
+        "askLexiWithPrompt": "リョウに何でも質問してください。「exit」と入力するとターミナルに戻ります。\n→ あなたのコマンド: {{prompt}}",
         "chatCleared": "チャットをクリアしました。リョウとのチャットは継続中です。「exit」と入力するとターミナルに戻ります。",
         "commandNotFound": "コマンドが見つかりません: {{cmd}}。利用可能なコマンドの一覧は「help」と入力してください。",
         "contentWritten": "コンテンツを書き込みました",
@@ -1889,7 +1889,7 @@
           "title": "リッチ編集"
         },
         "slashCommands": {
-          "description": "/を入力してクイックアクション、またはRyo AIにリモートで行を編集させる",
+          "description": "/を入力してクイックアクション、またはLexi AIにリモートで行を編集させる",
           "title": "スラッシュコマンド"
         },
         "voiceDictation": {
@@ -2058,7 +2058,7 @@
     "aboutThisMac": {
       "builtInMemory": "内蔵メモリ",
       "clickToToggle": "クリックで切り替え",
-      "description": "このコンピュータのryOSについて",
+      "description": "このコンピュータのLexiOSについて",
       "largestUnusedBlock": "最大の未使用ブロック",
       "mb": "MB",
       "system": "システム",
@@ -2072,7 +2072,7 @@
     "auth": {
       "createAccount": "アカウントを作成",
       "creatingAccount": "作成中...",
-      "dialogTitle": "ryOSログイン",
+      "dialogTitle": "LexiOSログイン",
       "logIn": "ログイン",
       "logOut": "ログアウト",
       "logOutDescription": "ログアウトしますか？アカウントからサインアウトされます。",
@@ -2166,8 +2166,8 @@
     },
     "htmlPreview": {
       "bannerFallbackTitle": "無題のアプレット",
-      "codePreviewTitle": "ryOSコードプレビュー",
-      "codePreviewTitleFullscreen": "ryOSコードプレビュー（フルスクリーン）",
+      "codePreviewTitle": "LexiOSコードプレビュー",
+      "codePreviewTitleFullscreen": "LexiOSコードプレビュー（フルスクリーン）",
       "copyHtml": "HTMLコードをコピー",
       "downloadHtml": "HTMLをダウンロード",
       "exitFullscreen": "全画面表示を終了",
@@ -2248,16 +2248,16 @@
     "system": {
       "debugBootScreenTest": "デバッグ起動画面テスト...",
       "formatFileSystem": "ファイルシステムをフォーマット",
-      "formatFileSystemDesc": "ファイルシステムをフォーマットしてもよろしいですか？これにより、すべての書類（サンプル書類を除く）、画像、カスタム壁紙が永久に削除されます。フォーマット後、ryOSが再起動します。",
+      "formatFileSystemDesc": "ファイルシステムをフォーマットしてもよろしいですか？これにより、すべての書類（サンプル書類を除く）、画像、カスタム壁紙が永久に削除されます。フォーマット後、LexiOSが再起動します。",
       "formattingFileSystem": "ファイルシステムをフォーマット中...",
       "rebooting": "再起動中...",
       "resetAllSettings": "すべての設定をリセット",
-      "resetAllSettingsDesc": "すべての設定をリセットしてもよろしいですか？これにより、保存されたすべての設定がクリアされ、デフォルト状態に復元されます。リセット後、ryOSが再起動します。",
+      "resetAllSettingsDesc": "すべての設定をリセットしてもよろしいですか？これにより、保存されたすべての設定がクリアされ、デフォルト状態に復元されます。リセット後、LexiOSが再起動します。",
       "resettingSystem": "システムをリセット中...",
       "restoringSystem": "システムを復元中...",
       "systemRestoring": "システムを復元中...",
-      "updatingToRyOS": "ryOS {{version}} にアップデート中...",
-      "updatingToRyOSWithBuild": "ryOS {{version}} ({{buildNumber}}) にアップデート中..."
+      "updatingToRyOS": "LexiOS {{version}} にアップデート中...",
+      "updatingToRyOSWithBuild": "LexiOS {{version}} ({{buildNumber}}) にアップデート中..."
     },
     "toast": {
       "alreadyLatestVersion": "最新バージョンです",
@@ -2268,7 +2268,7 @@
       "noAssetsToCache": "キャッシュするアセットがありません",
       "reboot": "再起動",
       "total": "合計",
-      "updateReady": "ryOS {{version}} ({{buildNumber}}) のアップデート準備完了",
+      "updateReady": "LexiOS {{version}} ({{buildNumber}}) のアップデート準備完了",
       "updatingAssets": "アセット更新中",
       "updatingIcons": "アイコン更新中",
       "updatingSounds": "サウンド更新中",
@@ -2291,7 +2291,7 @@
   "settings": {
     "language": {
       "chineseTraditional": "中文",
-      "description": "ryOSインターフェースの優先言語を選択",
+      "description": "LexiOSインターフェースの優先言語を選択",
       "english": "English",
       "french": "Français",
       "german": "Deutsch",

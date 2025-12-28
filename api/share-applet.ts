@@ -18,14 +18,14 @@ const APPLET_SHARE_PREFIX = "applet:share:";
 // Generate unique ID for applets (uses shared token generator)
 const generateId = (): string => generateToken().substring(0, 32);
 
-// Helper function to check if user is admin (ryo) with valid token
+// Helper function to check if user is admin (kassam) with valid token
 async function isAdmin(
   redis: Redis,
   username: string | null,
   token: string | null
 ): Promise<boolean> {
   if (!username || !token) return false;
-  if (username.toLowerCase() !== "ryo") return false;
+  if (username.toLowerCase() !== "kassam") return false;
 
   const authResult = await validateAuthToken(redis, username, token);
   return authResult.valid;
@@ -396,7 +396,7 @@ export default async function handler(req: Request) {
       );
     }
 
-    // DELETE: Delete applet (admin only - ryo)
+    // DELETE: Delete applet (admin only - kassam)
     if (req.method === "DELETE") {
       const authHeader = req.headers.get("Authorization");
       const usernameHeader = req.headers.get("X-Username");
@@ -404,7 +404,7 @@ export default async function handler(req: Request) {
       const authToken = authHeader?.replace("Bearer ", "") || null;
       const username = usernameHeader || null;
 
-      // Check if user is admin (ryo) with valid token
+      // Check if user is admin (kassam) with valid token
       const adminAccess = await isAdmin(redis, username, authToken);
       if (!adminAccess) {
         return new Response(
@@ -463,7 +463,7 @@ export default async function handler(req: Request) {
       );
     }
 
-    // PATCH: Update applet (admin only - ryo) - for setting featured status
+    // PATCH: Update applet (admin only - kassam) - for setting featured status
     if (req.method === "PATCH") {
       const authHeader = req.headers.get("Authorization");
       const usernameHeader = req.headers.get("X-Username");
@@ -471,7 +471,7 @@ export default async function handler(req: Request) {
       const authToken = authHeader?.replace("Bearer ", "") || null;
       const username = usernameHeader || null;
 
-      // Check if user is admin (ryo) with valid token
+      // Check if user is admin (kassam) with valid token
       const adminAccess = await isAdmin(redis, username, authToken);
       if (!adminAccess) {
         return new Response(

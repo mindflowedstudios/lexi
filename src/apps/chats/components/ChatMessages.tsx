@@ -249,9 +249,9 @@ interface ChatMessagesProps {
   error?: Error;
   onRetry?: () => void;
   onClear?: () => void;
-  isRoomView: boolean; // Indicates if this is a room view (vs Ryo chat)
+  isRoomView: boolean; // Indicates if this is a room view (vs Kassam chat)
   roomId?: string; // Needed for message deletion calls
-  isAdmin?: boolean; // Whether the current user has admin privileges (e.g. username === "ryo")
+  isAdmin?: boolean; // Whether the current user has admin privileges (e.g. username === "kassam")
   username?: string; // Current client username (needed for delete request)
   onMessageDeleted?: (messageId: string) => void; // Callback when a message is deleted locally
   fontSize: number; // Add font size prop
@@ -641,9 +641,9 @@ function ChatMessagesContent({
         }
 
         // Check for aquarium token in chat room messages
-        // In chat rooms, messages from ryo don't have a role, just a username
+        // In chat rooms, messages from kassam don't have a role, just a username
         if (
-          (message.role === "human" || message.username === "ryo") &&
+          (message.role === "human" || message.username === "kassam") &&
           hasAquariumToken
         ) {
           hasAquarium = true;
@@ -746,10 +746,10 @@ function ChatMessagesContent({
               <span
                 className="max-w-[120px] inline-block overflow-hidden text-ellipsis whitespace-nowrap"
                 title={
-                  message.username || (message.role === "user" ? t("apps.chats.messages.you") : t("apps.chats.messages.ryo"))
+                  message.username || (message.role === "user" ? t("apps.chats.messages.you") : t("apps.chats.messages.kassam"))
                 }
               >
-                {message.username || (message.role === "user" ? t("apps.chats.messages.you") : t("apps.chats.messages.ryo"))}
+                {message.username || (message.role === "user" ? t("apps.chats.messages.you") : t("apps.chats.messages.kassam"))}
               </span>{" "}
               <span className="text-gray-400 select-text">
                 {message.metadata?.createdAt ? (
@@ -1332,7 +1332,7 @@ function ChatMessagesContent({
           // Check if it's a rate limit error that's handled elsewhere
           const isRateLimitError =
             errorMessage === "Daily AI message limit reached." ||
-            errorMessage === "Set a username to continue chatting with Ryo.";
+            errorMessage === "Set a username to continue chatting with Kassam.";
 
           // Don't show these errors in chat since they're handled by other UI
           if (isRateLimitError) return null;

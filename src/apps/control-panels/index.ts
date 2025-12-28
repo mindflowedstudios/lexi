@@ -28,7 +28,7 @@ export const helpItems = [
   {
     icon: "🌐",
     title: "Language",
-    description: "Select your preferred language for ryOS interface",
+    description: "Select your preferred language for LexiOS interface",
   },
   {
     icon: "⚙️",
@@ -41,9 +41,8 @@ export const appMetadata = {
   name: "Control Panels",
   version: "1.0.0",
   creator: {
-    name: "Ryo Lu",
-    url: "https://ryo.lu",
+    name: "Kassam Khoja",
   },
-  github: "https://github.com/ryokun6/ryos",
+  github: "https://github.com/kassamkhoja/lexi",
   icon: "/icons/control-panels/appearance-manager/app.png",
 };

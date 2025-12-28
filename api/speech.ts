@@ -15,7 +15,7 @@ const DEFAULT_OPENAI_VOICE = "alloy";
 const DEFAULT_OPENAI_SPEED = 1.1;
 
 // ElevenLabs defaults
-const DEFAULT_ELEVENLABS_VOICE_ID = "kAyjEabBEu68HYYYRAHR"; // Ryo v3
+const DEFAULT_ELEVENLABS_VOICE_ID = "kAyjEabBEu68HYYYRAHR"; // Kassam v3
 const DEFAULT_ELEVENLABS_MODEL_ID = "eleven_turbo_v2_5"; // 2.5 turbo
 const DEFAULT_ELEVENLABS_OUTPUT_FORMAT = "mp3_44100_128";
 const DEFAULT_ELEVENLABS_VOICE_SETTINGS = {
@@ -172,15 +172,15 @@ export default async function handler(req: Request) {
   const isAuthenticated = validationResult.valid;
   const identifier = username ? username.toLowerCase() : null;
 
-  // Check if this is ryo with valid authentication
-  const isAuthenticatedRyo = isAuthenticated && identifier === "ryo";
+  // Check if this is kassam with valid authentication
+  const isAuthenticatedKassam = isAuthenticated && identifier === "kassam";
 
   // ---------------------------
   // Rate limiting (burst + daily)
   // ---------------------------
   try {
-    // Skip rate limiting for authenticated ryo user
-    if (!isAuthenticatedRyo) {
+    // Skip rate limiting for authenticated kassam user
+    if (!isAuthenticatedKassam) {
       const ip = RateLimit.getClientIp(req);
       // Use identifier (username or anon:ip) like chat.ts does
       const rateLimitIdentifier = isAuthenticated && identifier ? identifier : `anon:${ip}`;
@@ -253,7 +253,7 @@ export default async function handler(req: Request) {
         );
       }
     } else {
-      logInfo(requestId, "Rate limit bypassed for authenticated ryo user");
+      logInfo(requestId, "Rate limit bypassed for authenticated kassam user");
     }
   } catch (e) {
     // Fail open but log; do not block TTS if limiter errors

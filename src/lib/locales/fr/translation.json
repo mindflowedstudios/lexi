@@ -36,7 +36,7 @@
       },
       "help": {
         "adminAccess": {
-          "description": "Cette application n'est accessible qu'à l'administrateur (ryo).",
+          "description": "Cette application n'est accessible qu'à l'administrateur (lexi).",
           "title": "Accès administrateur"
         },
         "roomManagement": {
@@ -233,9 +233,9 @@
           "description": "Parcourez et installez des applets de la communauté. Ouvrez le menu Magasin pour découvrir de nouvelles applications.",
           "title": "Magasin d'applets"
         },
-        "createWithRyosChat": {
-          "description": "Demandez à ryOS Chat de créer des applications et applets personnalisés pour vous. Partagez vos idées et obtenez des applications fonctionnelles instantanément.",
-          "title": "Créer avec ryOS Chat"
+        "createWithLexisChat": {
+          "description": "Demandez à LexiOS Chat de créer des applications et applets personnalisés pour vous. Partagez vos idées et obtenez des applications fonctionnelles instantanément.",
+          "title": "Créer avec LexiOS Chat"
         },
         "keepUpdated": {
           "description": "Vérifiez les mises à jour dans le menu Magasin pour obtenir les dernières versions de vos applets installés.",
@@ -250,7 +250,7 @@
           "title": "Partager les applets"
         },
         "viewApplets": {
-          "description": "Ouvrir et exécuter des applets enregistrés depuis ryOS Chat ou téléchargés depuis le magasin.",
+          "description": "Ouvrir et exécuter des applets enregistrés depuis LexiOS Chat ou téléchargés depuis le magasin.",
           "title": "Voir les applets"
         }
       },
@@ -276,7 +276,7 @@
         "noAppletsOpen": "Aucune applet ouverte",
         "open": "Ouvrir...",
         "openAppletStore": "Ouvrir le Magasin d'applets",
-        "ryosApp": "Application ryOS",
+        "ryosApp": "Application LexiOS",
         "shareApplet": "Partager l'applet...",
         "store": "Magasin",
         "untitled": "Sans titre",
@@ -312,7 +312,7 @@
         "deleteMessage": "Supprimer le message",
         "deleteRoom": "Supprimer le salon",
         "leaveConversation": "Quitter la conversation",
-        "mentionRyo": "Mentionner Ryo",
+        "mentionLexi": "Mentionner Lexi",
         "messageUser": "Message à {{username}}",
         "newChat": "Nouveau chat",
         "pushToTalk": "Appuyer pour parler",
@@ -352,24 +352,24 @@
         "setPasswordTitle": "Définir le mot de passe"
       },
       "help": {
-        "chatWithRyo": {
-          "description": "Tapez votre message pour discuter avec Ryo, générer du code ou obtenir de l'aide avec ryOS.",
-          "title": "Discuter avec Ryo"
+        "chatWithLexi": {
+          "description": "Tapez votre message pour discuter avec Lexi, générer du code ou obtenir de l'aide avec LexiOS.",
+          "title": "Discuter avec Lexi"
         },
         "controlApps": {
-          "description": "Demandez à Ryo de lancer ou fermer des applications, changer de thème ou contrôler la lecture iPod.",
+          "description": "Demandez à Lexi de lancer ou fermer des applications, changer de thème ou contrôler la lecture iPod.",
           "title": "Contrôler les applications"
         },
         "createEditFiles": {
-          "description": "Demandez à Ryo de créer des applets HTML, modifier des documents, lire des fichiers ou rechercher dans le magasin d'applets.",
+          "description": "Demandez à Lexi de créer des applets HTML, modifier des documents, lire des fichiers ou rechercher dans le magasin d'applets.",
           "title": "Créer et modifier des fichiers"
         },
         "joinChatRooms": {
-          "description": "Connectez-vous avec d'autres dans des salons de discussion publics. Mentionnez @ryo pour des réponses IA.",
+          "description": "Connectez-vous avec d'autres dans des salons de discussion publics. Mentionnez @lexi pour des réponses IA.",
           "title": "Rejoindre les salons de discussion"
         },
         "nudgeDjMode": {
-          "description": "Envoyez 👋 un rappel pour des conseils contextuels. Ryo devient un DJ lorsque la musique est en cours de lecture.",
+          "description": "Envoyez 👋 un rappel pour des conseils contextuels. Lexi devient un DJ lorsque la musique est en cours de lecture.",
           "title": "Rappel et mode DJ"
         },
         "pushToTalk": {
@@ -398,8 +398,8 @@
       },
       "messages": {
         "delete": "Supprimer",
-        "greeting": "👋 salut ! je suis ryo. demande-moi n'importe quoi !",
-        "ryo": "Ryo",
+        "greeting": "👋 salut ! je suis lexi. demande-moi n'importe quoi !",
+        "lexi": "Lexi",
         "you": "Vous"
       },
       "name": "Chats",
@@ -419,15 +419,15 @@
         "leave": "Quitter",
         "listening": "Écoute",
         "loginToChat": "Se connecter au chat",
-        "loginToContinue": "Connectez-vous pour continuer à discuter avec Ryo.",
-        "loginToRyOS": "Se connecter à ryOS",
+        "loginToContinue": "Connectez-vous pour continuer à discuter avec Lexi.",
+        "loginToRyOS": "Se connecter à LexiOS",
         "newChat": "Nouveau chat",
         "noTranscriptionText": "Aucun texte de transcription reçu",
         "nudgeSent": "👋 *rappel envoyé*",
         "recording": "Enregistrement en cours...",
         "retry": "Réessayer",
-        "ryo": "@ryo",
-        "ryoWillRespond": "Ryo répondra à ce message",
+        "lexi": "@lexi",
+        "ryoWillRespond": "Lexi répondra à ce message",
         "scrollToBottom": "Faire défiler vers le bas",
         "sessionExpired": "Session expirée. Veuillez vous reconnecter.",
         "startNewConversation": "Démarrer une nouvelle conversation ?",
@@ -628,7 +628,7 @@
       "elevenlabs": "ElevenLabs",
       "elevenlabsVoiceId": "Identifiant vocal ElevenLabs",
       "formatFileSystem": "Formater le système de fichiers",
-      "formatFileSystemDescription": "Ceci effacera tous les fichiers (sauf les documents d'exemple), les images et les fonds d'écran personnalisés. ryOS redémarrera après le formatage.",
+      "formatFileSystemDescription": "Ceci effacera tous les fichiers (sauf les documents d'exemple), les images et les fonds d'écran personnalisés. LexiOS redémarrera après le formatage.",
       "help": {
         "aiModel": {
           "description": "Sélectionnez le modèle IA utilisé par Chats et l'assistant Terminal",
@@ -662,7 +662,7 @@
       "logIn": "Se connecter",
       "logOut": "Se déconnecter",
       "logOutOfAllDevices": "Se déconnecter de tous les appareils",
-      "loggedInToRyOS": "Connecté à ryOS",
+      "loggedInToRyOS": "Connecté à LexiOS",
       "loggingOut": "Déconnexion...",
       "login": "Connexion",
       "loginToSendMessages": "Connectez-vous pour envoyer des messages et plus encore",
@@ -686,7 +686,7 @@
       "resetAllSettings": "Réinitialiser tous les paramètres",
       "resetAllSettingsDescription": "Cela effacera tous les paramètres enregistrés et restaurera les valeurs par défaut.",
       "restore": "Restaurer",
-      "ryOSAccount": "Compte ryOS",
+      "LexiOSAccount": "Compte LexiOS",
       "screenSaver": "Économiseur d'écran",
       "screenSaverDescription": "S'active après une période d'inactivité",
       "screenSaverExitHint": "Cliquez ou appuyez sur n'importe quelle touche pour quitter",
@@ -1340,7 +1340,7 @@
           "title": "Synchronisé avec iPod"
         },
         "worksWithChats": {
-          "description": "Demandez à Ryo de jouer des chansons, contrôler la lecture ou ajuster les paramètres par chat.",
+          "description": "Demandez à Lexi de jouer des chansons, contrôler la lecture ou ajuster les paramètres par chat.",
           "title": "Fonctionne avec Chats"
         }
       },
@@ -1748,10 +1748,10 @@
     "terminal": {
       "commands": {
         "about": "À propos du terminal",
-        "ai": "Entrer en mode chat IA avec ryo",
+        "ai": "Entrer en mode chat IA avec lexi",
         "cat": "Afficher le contenu du fichier",
         "cd": "Changer de répertoire",
-        "chat": "Discuter avec ryo (alias)",
+        "chat": "Discuter avec lexi (alias)",
         "clear": "Effacer l'écran du terminal",
         "cowsay": "Une vache qui parle",
         "date": "Afficher la date/heure actuelle",
@@ -1765,7 +1765,7 @@
         "open": "Ouvrir une app, un fichier ou un applet",
         "pwd": "Afficher le répertoire actuel",
         "rm": "Déplacer le fichier vers la corbeille",
-        "ryo": "Discuter avec ryo",
+        "lexi": "Discuter avec lexi",
         "su": "Changer ou créer un utilisateur",
         "touch": "Créer un fichier vide",
         "vim": "Ouvrir le fichier dans l'éditeur vim",
@@ -1774,7 +1774,7 @@
       "description": "Interface de ligne de commande",
       "help": {
         "aiAssistant": {
-          "description": "Tapez \"ryo <invite>\" pour discuter avec Ryo IA directement dans le terminal.",
+          "description": "Tapez \"lexi <invite>\" pour discuter avec Lexi IA directement dans le terminal.",
           "title": "Assistant IA"
         },
         "basicCommands": {
@@ -1810,9 +1810,9 @@
       "name": "Terminal",
       "output": {
         "addedAndStartedPlaying": "Nouvelle chanson ajoutée et lecture démarrée",
-        "askRyoAnything": "demandez n'importe quoi à ryo. tapez 'exit' pour revenir au terminal.",
-        "askRyoWithPrompt": "demandez n'importe quoi à ryo. tapez 'exit' pour revenir au terminal.\n→ depuis votre commande : {{prompt}}",
-        "chatCleared": "chat effacé. vous discutez toujours avec ryo. tapez 'exit' pour revenir au terminal.",
+        "askLexiAnything": "demandez n'importe quoi à lexi. tapez 'exit' pour revenir au terminal.",
+        "askLexiWithPrompt": "demandez n'importe quoi à lexi. tapez 'exit' pour revenir au terminal.\n→ depuis votre commande : {{prompt}}",
+        "chatCleared": "chat effacé. vous discutez toujours avec lexi. tapez 'exit' pour revenir au terminal.",
         "commandNotFound": "commande introuvable : {{cmd}}. tapez 'help' pour une liste des commandes disponibles.",
         "contentWritten": "Contenu écrit",
         "fileCreated": "Fichier créé",
@@ -1889,7 +1889,7 @@
           "title": "Édition enrichie"
         },
         "slashCommands": {
-          "description": "Tapez / pour des actions rapides ou laissez Ryo IA modifier les lignes à distance",
+          "description": "Tapez / pour des actions rapides ou laissez Lexi IA modifier les lignes à distance",
           "title": "Commandes slash"
         },
         "voiceDictation": {
@@ -2058,7 +2058,7 @@
     "aboutThisMac": {
       "builtInMemory": "Mémoire intégrée",
       "clickToToggle": "Cliquer pour basculer",
-      "description": "Informations sur ryOS sur cet ordinateur",
+      "description": "Informations sur LexiOS sur cet ordinateur",
       "largestUnusedBlock": "Plus grand bloc inutilisé",
       "mb": "Mo",
       "system": "Système",
@@ -2072,7 +2072,7 @@
     "auth": {
       "createAccount": "Créer un compte",
       "creatingAccount": "Création...",
-      "dialogTitle": "Connexion ryOS",
+      "dialogTitle": "Connexion LexiOS",
       "logIn": "Se connecter",
       "logOut": "Se déconnecter",
       "logOutDescription": "Voulez-vous vraiment vous déconnecter ? Vous serez déconnecté de votre compte.",
@@ -2166,8 +2166,8 @@
     },
     "htmlPreview": {
       "bannerFallbackTitle": "Applet sans titre",
-      "codePreviewTitle": "Aperçu du code ryOS",
-      "codePreviewTitleFullscreen": "Aperçu du code ryOS en plein écran",
+      "codePreviewTitle": "Aperçu du code LexiOS",
+      "codePreviewTitleFullscreen": "Aperçu du code LexiOS en plein écran",
       "copyHtml": "Copier le code HTML",
       "downloadHtml": "Télécharger HTML",
       "exitFullscreen": "Quitter le mode plein écran",
@@ -2248,16 +2248,16 @@
     "system": {
       "debugBootScreenTest": "Test de l'écran de démarrage de débogage...",
       "formatFileSystem": "Formatter le système de fichiers",
-      "formatFileSystemDesc": "Êtes-vous sûr de vouloir formater le système de fichiers ? Cela supprimera définitivement tous les documents (sauf les documents d'exemple), images et fonds d'écran personnalisés. ryOS redémarrera après le formatage.",
+      "formatFileSystemDesc": "Êtes-vous sûr de vouloir formater le système de fichiers ? Cela supprimera définitivement tous les documents (sauf les documents d'exemple), images et fonds d'écran personnalisés. LexiOS redémarrera après le formatage.",
       "formattingFileSystem": "Formatage du système de fichiers...",
       "rebooting": "Redémarrage...",
       "resetAllSettings": "Réinitialiser tous les paramètres",
-      "resetAllSettingsDesc": "Êtes-vous sûr de vouloir réinitialiser tous les paramètres ? Cela effacera tous les paramètres enregistrés et restaurera les états par défaut. ryOS redémarrera après la réinitialisation.",
+      "resetAllSettingsDesc": "Êtes-vous sûr de vouloir réinitialiser tous les paramètres ? Cela effacera tous les paramètres enregistrés et restaurera les états par défaut. LexiOS redémarrera après la réinitialisation.",
       "resettingSystem": "Réinitialisation du système...",
       "restoringSystem": "Restauration du système...",
       "systemRestoring": "Restauration du système...",
-      "updatingToRyOS": "Mise à jour vers ryOS {{version}}...",
-      "updatingToRyOSWithBuild": "Mise à jour vers ryOS {{version}} ({{buildNumber}})..."
+      "updatingToRyOS": "Mise à jour vers LexiOS {{version}}...",
+      "updatingToRyOSWithBuild": "Mise à jour vers LexiOS {{version}} ({{buildNumber}})..."
     },
     "toast": {
       "alreadyLatestVersion": "Vous utilisez déjà la dernière version",
@@ -2268,7 +2268,7 @@
       "noAssetsToCache": "Aucune ressource à mettre en cache",
       "reboot": "Redémarrer",
       "total": "total",
-      "updateReady": "Mise à jour prête pour ryOS {{version}} ({{buildNumber}})",
+      "updateReady": "Mise à jour prête pour LexiOS {{version}} ({{buildNumber}})",
       "updatingAssets": "Mise à jour des ressources",
       "updatingIcons": "Mise à jour des icônes",
       "updatingSounds": "Mise à jour des sons",
@@ -2291,7 +2291,7 @@
   "settings": {
     "language": {
       "chineseTraditional": "中文",
-      "description": "Sélectionnez votre langue préférée pour l'interface ryOS",
+      "description": "Sélectionnez votre langue préférée pour l'interface LexiOS",
       "english": "English",
       "french": "Français",
       "german": "Deutsch",

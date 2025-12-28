@@ -590,7 +590,7 @@ export function canModifySong(
     return { canModify: false, reason: "Authentication required" };
   }
 
-  const isAdmin = username.toLowerCase() === "ryo";
+  const isAdmin = username.toLowerCase() === "kassam";
 
   // Admin can modify anything
   if (isAdmin) {

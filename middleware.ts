@@ -23,17 +23,17 @@ const APP_DESCRIPTIONS: Record<string, string> = {
   finder: "Browse and manage files",
   soundboard: "Record and trigger custom sounds",
   "internet-explorer": "Browse the web through time",
-  chats: "Talk to Ryo and neighbors online",
+  chats: "Talk to Kassam and neighbors online",
   textedit: "Write and edit documents",
   paint: "Draw and edit art, like it's 1984",
   "photo-booth": "Take photos with shader effects",
   minesweeper: "Play this classic puzzle game",
-  videos: "Watch videos on ryOS",
+  videos: "Watch videos on LexiOS",
   ipod: "Click-wheel music player with live lyrics",
   karaoke: "Full-screen karaoke with live lyrics",
   synth: "Virtual synthesizer with custom sounds",
   pc: "DOS emulator with classic games",
-  terminal: "Command line interface with Ryo AI",
+  terminal: "Command line interface with Kassam AI",
   "applet-viewer": "Explore and install community applets",
   "control-panels": "Set themes, sounds, and system preferences",
 };
@@ -79,7 +79,7 @@ function generateOgHtml(options: {
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:image" content="${escapeHtml(imageUrl)}">
-  <meta property="og:site_name" content="ryOS">
+  <meta property="og:site_name" content="LexiOS">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">
@@ -166,8 +166,8 @@ function parseYouTubeTitle(rawTitle: string): { title: string; artist: string | 
 async function getYouTubeInfo(videoId: string): Promise<{ title: string; artist: string | null } | null> {
   try {
     const oEmbedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
-    const response = await fetch(oEmbedUrl, { 
-      headers: { "User-Agent": "ryOS/1.0" },
+    const response = await fetch(oEmbedUrl, {
+      headers: { "User-Agent": "LexiOS/1.0" },
     });
     
     if (!response.ok) return null;
@@ -186,15 +186,15 @@ export default async function middleware(request: Request) {
   const pathname = url.pathname;
   const baseUrl = url.origin;
 
-  // Skip if already redirected (has _ryo param)
-  if (url.searchParams.has("_ryo")) {
+  // Skip if already redirected (has _lexios param)
+  if (url.searchParams.has("_lexios")) {
     return;
   }
 
   // Default values
   let imageUrl = `${baseUrl}/icons/mac-512.png`;
-  let title = "ryOS";
-  let description = "An AI OS experience, made with Cursor";
+  let title = "LexiOS";
+  let description = "A love letter in the form of an OS, made for Lexi";
   let matched = false;
 
   // App URLs: /soundboard, /paint, /ipod, etc.
@@ -202,8 +202,8 @@ export default async function middleware(request: Request) {
   if (appMatch && APP_NAMES[appMatch[1]]) {
     const appId = appMatch[1];
     imageUrl = `${baseUrl}/icons/macosx/${APP_ICONS[appId]}`;
-    title = `${APP_NAMES[appId]} on ryOS`;
-    description = APP_DESCRIPTIONS[appId] || "Open app in ryOS";
+    title = `${APP_NAMES[appId]} on LexiOS`;
+    description = APP_DESCRIPTIONS[appId] || "Open app in LexiOS";
     matched = true;
   }
 
@@ -217,10 +217,10 @@ export default async function middleware(request: Request) {
     const ytInfo = await getYouTubeInfo(videoId);
     if (ytInfo) {
       title = `${ytInfo.title}`;
-      description = "Watch on ryOS Videos";
+      description = "Watch on LexiOS Videos";
     } else {
-      title = "Shared Video on ryOS";
-      description = "Watch on ryOS Videos";
+      title = "Shared Video on LexiOS";
+      description = "Watch on LexiOS Videos";
     }
     matched = true;
   }
@@ -236,14 +236,14 @@ export default async function middleware(request: Request) {
     if (ytInfo) {
       if (ytInfo.artist) {
         title = `${ytInfo.title} - ${ytInfo.artist}`;
-        description = `Listen on ryOS iPod`;
+        description = `Listen on LexiOS iPod`;
       } else {
         title = ytInfo.title;
-        description = "Listen on ryOS iPod";
+        description = "Listen on LexiOS iPod";
       }
     } else {
-      title = "Shared Song - ryOS";
-      description = "Listen on ryOS iPod";
+      title = "Shared Song - LexiOS";
+      description = "Listen on LexiOS iPod";
     }
     matched = true;
   }
@@ -257,13 +257,13 @@ export default async function middleware(request: Request) {
     // Fetch YouTube info for title/artist
     const ytInfo = await getYouTubeInfo(videoId);
     if (ytInfo) {
-      // Format: "Sing [Title] - [Artist] on ryOS" or "Sing [Title] on ryOS"
+      // Format: "Sing [Title] - [Artist] on LexiOS" or "Sing [Title] on LexiOS"
       const songDisplay = ytInfo.artist ? `${ytInfo.title} - ${ytInfo.artist}` : ytInfo.title;
-      title = `Sing ${songDisplay} on ryOS`;
-      description = `Sing along on ryOS Karaoke`;
+      title = `Sing ${songDisplay} on LexiOS`;
+      description = `Sing along on LexiOS Karaoke`;
     } else {
-      title = "Sing on ryOS Karaoke";
-      description = "Sing along on ryOS Karaoke";
+      title = "Sing on LexiOS Karaoke";
+      description = "Sing along on LexiOS Karaoke";
     }
     matched = true;
   }
@@ -272,8 +272,8 @@ export default async function middleware(request: Request) {
   const appletMatch = pathname.match(/^\/applet-viewer\/([a-zA-Z0-9_-]+)$/);
   if (appletMatch) {
     imageUrl = `${baseUrl}/icons/macosx/applet.png`;
-    title = "Shared Applet on ryOS";
-    description = "Open applet in ryOS";
+    title = "Shared Applet on LexiOS";
+    description = "Open applet in LexiOS";
     matched = true;
   }
 
@@ -304,19 +304,19 @@ export default async function middleware(request: Request) {
         }
         
         if (sharedYear === "current") {
-          title = `${hostname} on ryOS`;
-          description = "Open in ryOS Internet Explorer";
+          title = `${hostname} on LexiOS`;
+          description = "Open in LexiOS Internet Explorer";
         } else {
-          title = `${hostname} in ${sharedYear} on ryOS`;
-          description = "Time travel in ryOS Internet Explorer";
+          title = `${hostname} in ${sharedYear} on LexiOS`;
+          description = "Time travel in LexiOS Internet Explorer";
         }
       } else {
-        title = "Shared Page on ryOS";
-        description = "Open in ryOS Internet Explorer";
+        title = "Shared Page on LexiOS";
+        description = "Open in LexiOS Internet Explorer";
       }
     } catch {
-      title = "Shared Page on ryOS";
-      description = "Open in ryOS Internet Explorer";
+      title = "Shared Page on LexiOS";
+      description = "Open in LexiOS Internet Explorer";
     }
     matched = true;
   }
@@ -324,8 +324,8 @@ export default async function middleware(request: Request) {
   // If we have matched a share URL, return OG HTML
   if (matched) {
     const pageUrl = `${baseUrl}${pathname}`;
-    // Redirect URL includes _ryo param to bypass middleware on next request
-    const redirectUrl = `${pageUrl}?_ryo=1`;
+    // Redirect URL includes _lexios param to bypass middleware on next request
+    const redirectUrl = `${pageUrl}?_lexios=1`;
 
     const html = generateOgHtml({
       title,

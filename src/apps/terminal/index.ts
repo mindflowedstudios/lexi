@@ -21,7 +21,7 @@ export const helpItems = [
     icon: "🤖",
     title: "AI Assistant",
     description:
-      'Type "ryo &lt;prompt&gt;" to chat with Ryo AI directly inside the terminal.',
+      'Type "kassam &lt;prompt&gt;" to chat with Kassam AI directly inside the terminal.',
   },
   {
     icon: "📝",
@@ -41,9 +41,8 @@ export const appMetadata = {
   name: "Terminal",
   version: "1.0",
   creator: {
-    name: "Ryo Lu",
-    url: "https://ryo.lu",
+    name: "Kassam Khoja",
   },
-  github: "https://github.com/ryokun6/ryos",
+  github: "https://github.com/kassamkhoja/lexi",
   icon: "/icons/default/terminal.png",
 };

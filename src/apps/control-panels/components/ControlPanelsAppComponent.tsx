@@ -189,46 +189,17 @@ const base64ToBlob = (dataUrl: string): Blob => {
 
 // Version display component that reads from app store
 function VersionDisplay() {
-  const { t } = useTranslation();
-  const { ryOSVersion, ryOSBuildNumber } = useAppStoreShallow((state) => ({
-    ryOSVersion: state.ryOSVersion,
-    ryOSBuildNumber: state.ryOSBuildNumber,
+  const { lexiOSVersion, lexiOSBuildNumber } = useAppStoreShallow((state) => ({
+    lexiOSVersion: state.lexiOSVersion,
+    lexiOSBuildNumber: state.lexiOSBuildNumber,
   }));
-  const [desktopVersion, setDesktopVersion] = React.useState<string | null>(null);
-  const isMac = React.useMemo(() => 
-    typeof navigator !== 'undefined' && navigator.platform.toLowerCase().includes('mac'), 
-    []
-  );
-  
-  // Fetch desktop version for download link
-  React.useEffect(() => {
-    if (isMac) {
-      fetch('/version.json', { cache: 'no-store' })
-        .then(res => res.json())
-        .then(data => setDesktopVersion(data.desktopVersion))
-        .catch(() => setDesktopVersion('1.0.1')); // fallback
-    }
-  }, [isMac]);
-  
-  const displayVersion = ryOSVersion || "...";
-  const displayBuild = ryOSBuildNumber ? ` (Build ${ryOSBuildNumber})` : "";
-  
+
+  const displayVersion = lexiOSVersion || "...";
+  const displayBuild = lexiOSBuildNumber ? ` (Build ${lexiOSBuildNumber})` : "";
+
   return (
     <p className="text-[11px] text-gray-600 font-geneva-12">
-      ryOS {displayVersion}{displayBuild}
-      {isMac && desktopVersion && (
-        <>
-          {" · "}
-          <a 
-            href={`https://github.com/ryokun6/ryos/releases/download/v${desktopVersion}/ryOS_${desktopVersion}_aarch64.dmg`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
-          >
-            {t("apps.control-panels.downloadMacApp")}
-          </a>
-        </>
-      )}
+      LexiOS {displayVersion}{displayBuild}
     </p>
   );
 }
@@ -544,7 +515,7 @@ export function ControlPanelsAppComponent({
 
   const performReset = () => {
     // Preserve critical recovery keys while clearing everything else
-    const fileMetadataStore = localStorage.getItem("ryos:files");
+    const fileMetadataStore = localStorage.getItem("lexios:files");
     const usernameRecovery = localStorage.getItem("_usr_recovery_key_");
     const authTokenRecovery = localStorage.getItem("_auth_recovery_key_");
 
@@ -552,7 +523,7 @@ export function ControlPanelsAppComponent({
     clearPrefetchFlag(); // Force re-prefetch on next boot
 
     if (fileMetadataStore) {
-      localStorage.setItem("ryos:files", fileMetadataStore);
+      localStorage.setItem("lexios:files", fileMetadataStore);
     }
     if (usernameRecovery) {
       localStorage.setItem("_usr_recovery_key_", usernameRecovery);
@@ -725,7 +696,7 @@ export function ControlPanelsAppComponent({
         .split("T")
         .join("-")
         .slice(0, -5);
-      a.download = `ryOS-backup-${timestamp}.gz`;
+      a.download = `LexiOS-backup-${timestamp}.gz`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -824,10 +795,10 @@ export function ControlPanelsAppComponent({
           console.log(
             "[Restore] Detected old backup format (no version or version < 2)"
           );
-        } else if (backup.localStorage && backup.localStorage["ryos:files"]) {
+        } else if (backup.localStorage && backup.localStorage["lexios:files"]) {
           // For newer backups, also check if files lack UUIDs
           try {
-            const filesDataStr = backup.localStorage["ryos:files"];
+            const filesDataStr = backup.localStorage["lexios:files"];
             const filesData = filesDataStr ? JSON.parse(filesDataStr) : {};
             if (filesData.state && filesData.state.items) {
               // Check if any files lack UUIDs
@@ -988,7 +959,7 @@ export function ControlPanelsAppComponent({
           /* Synchronize files store metadata with IndexedDB content after restore */
           try {
             const db = await ensureIndexedDBInitialized();
-            const persistedKey = "ryos:files";
+            const persistedKey = "lexios:files";
             let raw = localStorage.getItem(persistedKey);
 
             // Handle case where files store doesn't exist yet (very old backups)
@@ -1418,7 +1389,7 @@ export function ControlPanelsAppComponent({
 
               // Clear any migration flag to ensure migration doesn't run again
               localStorage.setItem(
-                "ryos:indexeddb-uuid-migration-v1",
+                "lexios:indexeddb-uuid-migration-v1",
                 "completed"
               );
               console.log("[Restore] UUID migration completed during restore");
@@ -1433,7 +1404,7 @@ export function ControlPanelsAppComponent({
 
             // Emergency fallback: ensure library state is set to prevent auto-init even on error
             try {
-              const persistedKey = "ryos:files";
+              const persistedKey = "lexios:files";
               const raw = localStorage.getItem(persistedKey);
               if (raw) {
                 const parsed = JSON.parse(raw);
@@ -2055,24 +2026,24 @@ export function ControlPanelsAppComponent({
                         <SelectTrigger className="w-[120px]">
                           <SelectValue placeholder={t("apps.control-panels.select")}>
                             {ttsVoice === "YC3iw27qriLq7UUaqAyi"
-                              ? "Ryo v3"
+                              ? "Kassam v3"
                               : ttsVoice === "kAyjEabBEu68HYYYRAHR"
-                              ? "Ryo v2"
+                              ? "Kassam v2"
                               : ttsVoice === "G0mlS0y8ByHjGAOxBgvV"
-                              ? "Ryo"
+                              ? "Kassam"
                               : t("apps.control-panels.select")}
                           </SelectValue>
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="__null__">{t("apps.control-panels.select")}</SelectItem>
                           <SelectItem value="YC3iw27qriLq7UUaqAyi">
-                            Ryo v3
+                            Kassam v3
                           </SelectItem>
                           <SelectItem value="kAyjEabBEu68HYYYRAHR">
-                            Ryo v2
+                            Kassam v2
                           </SelectItem>
                           <SelectItem value="G0mlS0y8ByHjGAOxBgvV">
-                            Ryo
+                            Kassam
                           </SelectItem>
                         </SelectContent>
                       </Select>

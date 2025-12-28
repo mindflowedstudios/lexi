@@ -1274,7 +1274,7 @@ export function IpodAppComponent({
     };
   }, [lyricsSourceOverride]);
 
-  // Resolve "auto" translation language to actual ryOS locale
+  // Resolve "auto" translation language to actual LexiOS locale
   const effectiveTranslationLanguage = useMemo(
     () => getEffectiveTranslationLanguage(lyricsTranslationLanguage),
     [lyricsTranslationLanguage, i18n.language]

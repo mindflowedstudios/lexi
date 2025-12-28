@@ -85,7 +85,7 @@ export const config = { runtime: "edge" };
 // Static portion of the system prompt shared across requests. This string is
 // passed via the `system` option to enable prompt caching by the model
 // provider.
-const STATIC_SYSTEM_PROMPT = `${CORE_PRIORITY_INSTRUCTIONS}\n\nThe user is in ryOS Internet Explorer asking to time travel with website context and a specific year. You are Ryo, a visionary designer specialized in turning present websites into past and futuristic coherent versions in story and design.\n\nGenerate content for the URL path and year provided, original site content, and use provided HTML as template if available.\n\n${CODE_GENERATION_INSTRUCTIONS}`;
+const STATIC_SYSTEM_PROMPT = `${CORE_PRIORITY_INSTRUCTIONS}\n\nThe user is in LexiOS Internet Explorer asking to time travel with website context and a specific year. You are Kassam, a visionary designer specialized in turning present websites into past and futuristic coherent versions in story and design.\n\nGenerate content for the URL path and year provided, original site content, and use provided HTML as template if available.\n\n${CODE_GENERATION_INSTRUCTIONS}`;
 
 // Function to generate the dynamic portion of the system prompt. This portion
 // depends on the requested year and URL and will be sent as a regular system
@@ -123,7 +123,7 @@ const getDynamicSystemPrompt = (
 
   const YEAR_NOT_SPECIFIED_INSTRUCTIONS = `Year not specified. Assume current year ${currentYear}.`;
 
-  const PERSONA_INSTRUCTIONS_BLOCK = `ABOUT THE DESIGNER (RYO LU):
+  const PERSONA_INSTRUCTIONS_BLOCK = `ABOUT THE DESIGNER (KASSAM):
 ${RYO_PERSONA_INSTRUCTIONS}`;
 
   // --- Determine Year Specific Instructions ---
@@ -144,10 +144,10 @@ ${RYO_PERSONA_INSTRUCTIONS}`;
 
   let finalPrompt = `${INTRO_LINE}\n\n${yearSpecificInstructions}`;
 
-  // Conditionally add Ryo's persona instructions
+  // Conditionally add Kassam's persona instructions
   if (
     rawUrl &&
-    (rawUrl.includes("ryo.lu") ||
+    (rawUrl.includes("kassam") ||
       rawUrl.includes("x.com") ||
       rawUrl.includes("notion") ||
       rawUrl.includes("cursor"))

@@ -16,6 +16,7 @@ import { isTauri } from "./utils/platform";
 import { checkDesktopUpdate, onDesktopUpdate, DesktopUpdateResult } from "./utils/prefetch";
 import { Download } from "lucide-react";
 import { ScreenSaverOverlay } from "./components/screensavers/ScreenSaverOverlay";
+import { KonamiEasterEgg } from "./components/easter-eggs/KonamiEasterEgg";
 
 // Convert registry to array
 const apps: AnyApp[] = Object.values(appRegistry);
@@ -106,7 +107,7 @@ export function App() {
         // Mark as seen immediately so dismissing the toast won't show it again
         setLastSeenDesktopVersion(result.version);
         // New version available - show update toast (both web and Tauri)
-        toast(`ryOS ${result.version} for Mac is available`, {
+        toast(`LexiOS ${result.version} for Mac is available`, {
           id: 'desktop-update',
           icon: <Download className="h-4 w-4" />,
           duration: Infinity,
@@ -114,7 +115,7 @@ export function App() {
             label: "Download",
             onClick: () => {
               window.open(
-                `https://github.com/ryokun6/ryos/releases/download/v${result.version}/ryOS_${result.version}_aarch64.dmg`,
+                `https://github.com/kassamkhoja/lexi/releases/download/v${result.version}/LexiOS_${result.version}_aarch64.dmg`,
                 "_blank"
               );
             },
@@ -124,7 +125,7 @@ export function App() {
         // Mark as seen immediately so dismissing the toast won't show it again
         setLastSeenDesktopVersion(result.version);
         // First time user on web - show initial download toast (not in Tauri)
-        toast("ryOS is available as a Mac app", {
+        toast("LexiOS is available as a Mac app", {
           id: 'desktop-update',
           icon: <Download className="h-4 w-4" />,
           duration: Infinity,
@@ -132,7 +133,7 @@ export function App() {
             label: "Download",
             onClick: () => {
               window.open(
-                `https://github.com/ryokun6/ryos/releases/download/v${result.version}/ryOS_${result.version}_aarch64.dmg`,
+                `https://github.com/kassamkhoja/lexi/releases/download/v${result.version}/LexiOS_${result.version}_aarch64.dmg`,
                 "_blank"
               );
             },
@@ -175,6 +176,7 @@ export function App() {
       <AppManager apps={apps} />
       <Toaster position={toastConfig.position} offset={toastConfig.offset} />
       <ScreenSaverOverlay />
+      <KonamiEasterEgg />
     </>
   );
 }

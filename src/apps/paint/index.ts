@@ -40,9 +40,8 @@ export const appMetadata = {
   name: "Paint",
   version: "1.0.4",
   creator: {
-    name: "Ryo",
-    url: "https://ryo.lu",
+    name: "Kassam Khoja",
   },
-  github: "https://github.com/ryokun6/ryos",
+  github: "https://github.com/kassamkhoja/lexi",
   icon: "/icons/default/paint.png",
 };

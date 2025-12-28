@@ -77,7 +77,7 @@ export function getYouTubeVideoId(url: string): string | null {
 // Helper to get translation badge from code
 export function getTranslationBadge(code: string | null): string | null {
   if (!code) return null;
-  // For "auto", resolve to the actual ryOS language
+  // For "auto", resolve to the actual LexiOS language
   if (code === "auto") {
     const actualLang = i18n.language;
     return TRANSLATION_BADGES[actualLang] || actualLang[0]?.toUpperCase() || "?";

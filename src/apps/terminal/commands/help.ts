@@ -34,7 +34,7 @@ terminal
   cowsay <text>    ${t("apps.terminal.commands.cowsay")}
 
 assistant
-  ryo <prompt>     ${t("apps.terminal.commands.ryo")}
+  kassam <prompt>  ${t("apps.terminal.commands.kassam")}
   ai <prompt>      ${t("apps.terminal.commands.ai")}
   chat <prompt>    ${t("apps.terminal.commands.chat")}
 

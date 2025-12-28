@@ -100,11 +100,11 @@ interface AppStoreState extends AppManagerState {
   exposeMode: boolean;
   setExposeMode: (v: boolean) => void;
   
-  // ryOS version (fetched from version.json)
-  ryOSVersion: string | null;
-  ryOSBuildNumber: string | null;
-  ryOSBuildTime: string | null;
-  setRyOSVersion: (version: string, buildNumber: string, buildTime?: string) => void;
+  // LexiOS version (fetched from version.json)
+  lexiOSVersion: string | null;
+  lexiOSBuildNumber: string | null;
+  lexiOSBuildTime: string | null;
+  setLexiOSVersion: (version: string, buildNumber: string, buildTime?: string) => void;
 }
 
 const CURRENT_APP_STORE_VERSION = 3; // bump for instanceOrder unification
@@ -132,15 +132,15 @@ export const useAppStore = create<AppStoreState>()(
       exposeMode: false,
       setExposeMode: (v) => set({ exposeMode: v }),
 
-      // ryOS version (fetched from version.json)
-      ryOSVersion: null,
-      ryOSBuildNumber: null,
-      ryOSBuildTime: null,
-      setRyOSVersion: (version, buildNumber, buildTime) =>
+      // LexiOS version (fetched from version.json)
+      lexiOSVersion: null,
+      lexiOSBuildNumber: null,
+      lexiOSBuildTime: null,
+      setLexiOSVersion: (version, buildNumber, buildTime) =>
         set({
-          ryOSVersion: version,
-          ryOSBuildNumber: buildNumber,
-          ryOSBuildTime: buildTime || null,
+          lexiOSVersion: version,
+          lexiOSBuildNumber: buildNumber,
+          lexiOSBuildTime: buildTime || null,
         }),
 
       updateWindowState: (appId, position, size) =>
@@ -754,7 +754,7 @@ export const useAppStore = create<AppStoreState>()(
       },
     }),
     {
-      name: "ryos:app-store",
+      name: "lexios:app-store",
       version: CURRENT_APP_STORE_VERSION,
       partialize: (state): Partial<AppStoreState> => ({
         // Core app/window state
@@ -769,9 +769,9 @@ export const useAppStore = create<AppStoreState>()(
         isFirstBoot: state.isFirstBoot,
         macAppToastShown: state.macAppToastShown,
         lastSeenDesktopVersion: state.lastSeenDesktopVersion,
-        ryOSVersion: state.ryOSVersion,
-        ryOSBuildNumber: state.ryOSBuildNumber,
-        ryOSBuildTime: state.ryOSBuildTime,
+        lexiOSVersion: state.lexiOSVersion,
+        lexiOSBuildNumber: state.lexiOSBuildNumber,
+        lexiOSBuildTime: state.lexiOSBuildTime,
         
         // Instance management
         instances: Object.fromEntries(
